@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+/* ************************************************************************************************************************************************ */
+/* Whole Sheet */
+/* ************************************************************************************************************************************************ */
+
+div.runeterra-charsheet {
+    background: url("https://cdn.discordapp.com/attachments/681918935809130568/1028077744485056724/Back.png");
+    background-position:center;
+    background-size: cover;
+    width: 840px;
+}
+
+button[type=roll]::before{
+    content:    '' !important;
+}
+
+button[type=roll]{
+    background: transparent;
+    border:     transparent;
+    box-shadow: none;   
+}
+
+button[type=roll]:hover{
+    background: transparent;
+    border:     transparent;
+    box-shadow: none;   
+}
+
+
+/* ************************************************************************************************************************************************ */
+/* Logo */
+/* ************************************************************************************************************************************************ */
+div.logoSheet {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: space-around;
+    align-items:     center;
+    top:             0;
+    width:           100%;
+    border:          none;
+    border-radius:   7px;
+    margin:          0 0 1px 0; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+img.logoCadre{
+    width : 80px;
+    height : 80px;
+}
+
+img.logoTitle{
+    width : 400px;
+    height : 100px;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Menus */
+/* ************************************************************************************************************************************************ */
+div.menus {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: center;
+    align-items:     center;
+    position:        sticky;
+    top:             0;
+    width:           100%;
+    height:          39px;
+    border:          2px solid black;
+    border-radius:   7px;
+    margin:          0 0 1px 0; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+button:before {
+    content: ''
+}
+
+button.menus-button {
+    width:               25px;
+    height:              31px;
+    border:              1px solid black;
+    color:             black;
+    margin:              1px;
+    border-radius:       7px;
+    text-align:          center;
+    vertical-align:      middle;
+    background-position: center;
+    background-size:     contain;
+    background:          transparent;
+}
+
+img.menus-button{
+    size-adjust:inherit;
+    margin :    0;
+    align-self: center;
+    justify-self: center;
+}
+
+button.menus-button:active {
+    border: 1px solid #8d031a;
+    color : #8d031a;
+}
+
+button.menus-button:hover {
+    border: 2px solid #597ef8;
+    color : #5b80f8;
+}
+
+input.toggleTab[value="Bio"]~div.menus button.menus-button[value="Bio"],
+input.toggleTab[value="Sta"]~div.menus button.menus-button[value="Sta"],
+input.toggleTab[value="Abi"]~div.menus button.menus-button[value="Abi"],
+input.toggleTab[value="Art"]~div.menus button.menus-button[value="Art"],
+input.toggleTab[value="Ass"]~div.menus button.menus-button[value="Ass"],
+input.toggleTab[value="Cou"]~div.menus button.menus-button[value="Cou"],
+input.toggleTab[value="Sch"]~div.menus button.menus-button[value="Sch"],
+input.toggleTab[value="War"]~div.menus button.menus-button[value="War"],
+input.toggleTab[value="Hea"]~div.menus button.menus-button[value="Hea"],
+input.toggleTab[value="Mag"]~div.menus button.menus-button[value="Mag"],
+input.toggleTab[value="Mer"]~div.menus button.menus-button[value="Mer"],
+input.toggleTab[value="Nob"]~div.menus button.menus-button[value="Nob"],
+input.toggleTab[value="Pal"]~div.menus button.menus-button[value="Pal"],
+input.toggleTab[value="Pir"]~div.menus button.menus-button[value="Pir"],
+input.toggleTab[value="Ran"]~div.menus button.menus-button[value="Ran"],
+input.toggleTab[value="Sor"]~div.menus button.menus-button[value="Sor"],
+input.toggleTab[value="Pri"]~div.menus button.menus-button[value="Pri"],
+input.toggleTab[value="Thi"]~div.menus button.menus-button[value="Thi"],
+input.toggleTab[value="Cus"]~div.menus button.menus-button[value="Cus"],
+input.toggleTab[value="Inv"]~div.menus button.menus-button[value="Inv"],
+input.toggleTab[value="Rel"]~div.menus button.menus-button[value="Rel"],
+input.toggleTab[value="Not"]~div.menus button.menus-button[value="Not"]
+{
+    border: 2px solid #8d031a;
+    color : #8d031a;
+}
+
+input.toggleTab[value="Bio"]~div.menus button.menus-button[value="Bio"] img.menus-button,
+input.toggleTab[value="Sta"]~div.menus button.menus-button[value="Sta"] img.menus-button,
+input.toggleTab[value="Abi"]~div.menus button.menus-button[value="Abi"] img.menus-button,
+input.toggleTab[value="Art"]~div.menus button.menus-button[value="Art"] img.menus-button,
+input.toggleTab[value="Ass"]~div.menus button.menus-button[value="Ass"] img.menus-button,
+input.toggleTab[value="Cou"]~div.menus button.menus-button[value="Cou"] img.menus-button,
+input.toggleTab[value="Sch"]~div.menus button.menus-button[value="Sch"] img.menus-button,
+input.toggleTab[value="War"]~div.menus button.menus-button[value="War"] img.menus-button,
+input.toggleTab[value="Hea"]~div.menus button.menus-button[value="Hea"] img.menus-button,
+input.toggleTab[value="Mag"]~div.menus button.menus-button[value="Mag"] img.menus-button,
+input.toggleTab[value="Mer"]~div.menus button.menus-button[value="Mer"] img.menus-button,
+input.toggleTab[value="Nob"]~div.menus button.menus-button[value="Nob"] img.menus-button,
+input.toggleTab[value="Pal"]~div.menus button.menus-button[value="Pal"] img.menus-button,
+input.toggleTab[value="Pir"]~div.menus button.menus-button[value="Pir"] img.menus-button,
+input.toggleTab[value="Ran"]~div.menus button.menus-button[value="Ran"] img.menus-button,
+input.toggleTab[value="Sor"]~div.menus button.menus-button[value="Sor"] img.menus-button,
+input.toggleTab[value="Pri"]~div.menus button.menus-button[value="Pri"] img.menus-button,
+input.toggleTab[value="Thi"]~div.menus button.menus-button[value="Thi"] img.menus-button,
+input.toggleTab[value="Cus"]~div.menus button.menus-button[value="Cus"] img.menus-button,
+input.toggleTab[value="Inv"]~div.menus button.menus-button[value="Inv"] img.menus-button,
+input.toggleTab[value="Rel"]~div.menus button.menus-button[value="Rel"] img.menus-button,
+input.toggleTab[value="Not"]~div.menus button.menus-button[value="Not"] img.menus-button
+{
+    filter: invert(5%) sepia(100%) saturate(7500%) hue-rotate(348deg) brightness(96%) contrast(102%);
+}
+
+button.menus-button:hover img.menus-button{
+    filter: invert(39%) sepia(92%) saturate(397%) hue-rotate(189deg) brightness(106%) contrast(106%);
+}
+
+button.menus-button[value="Art"],
+button.menus-button[value="Ass"],
+button.menus-button[value="Cou"],
+button.menus-button[value="Sch"],
+button.menus-button[value="War"],
+button.menus-button[value="Hea"],
+button.menus-button[value="Mag"],
+button.menus-button[value="Mer"],
+button.menus-button[value="Nob"],
+button.menus-button[value="Pal"],
+button.menus-button[value="Pir"],
+button.menus-button[value="Ran"],
+button.menus-button[value="Sor"],
+button.menus-button[value="Pri"],
+button.menus-button[value="Thi"],
+button.menus-button[value="Cus"]{
+    display : none;
+}
+
+input[type="hidden"][value="classArt"].toggleMenus~div.menus button.menus-button[value="Art"],
+input[type="hidden"][value="classAss"].toggleMenus~div.menus button.menus-button[value="Ass"],
+input[type="hidden"][value="classCou"].toggleMenus~div.menus button.menus-button[value="Cou"],
+input[type="hidden"][value="classSch"].toggleMenus~div.menus button.menus-button[value="Sch"],
+input[type="hidden"][value="classWar"].toggleMenus~div.menus button.menus-button[value="War"],
+input[type="hidden"][value="classHea"].toggleMenus~div.menus button.menus-button[value="Hea"],
+input[type="hidden"][value="classMag"].toggleMenus~div.menus button.menus-button[value="Mag"],
+input[type="hidden"][value="classMer"].toggleMenus~div.menus button.menus-button[value="Mer"],
+input[type="hidden"][value="classNob"].toggleMenus~div.menus button.menus-button[value="Nob"],
+input[type="hidden"][value="classPal"].toggleMenus~div.menus button.menus-button[value="Pal"],
+input[type="hidden"][value="classPir"].toggleMenus~div.menus button.menus-button[value="Pir"],
+input[type="hidden"][value="classRan"].toggleMenus~div.menus button.menus-button[value="Ran"],
+input[type="hidden"][value="classSor"].toggleMenus~div.menus button.menus-button[value="Sor"],
+input[type="hidden"][value="classPri"].toggleMenus~div.menus button.menus-button[value="Pri"],
+input[type="hidden"][value="classThi"].toggleMenus~div.menus button.menus-button[value="Thi"],
+input[type="hidden"][value="classCus"].toggleMenus~div.menus button.menus-button[value="Cus"]{
+    display : flex;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Titles Sections */
+/* ************************************************************************************************************************************************ */
+
+div.sectTitle{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: center;
+    align-items:     top;
+    top:             0;
+    width:           100%;
+    height:          25px;
+    border:          none;
+    border-radius:   0;
+    margin:          0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+}
+
+div.sectContent,
+div.sectReduced{
+    width:           100%;
+    border:          none;
+    border-radius:   0;
+    margin:          0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+}
+
+button.lockButton,
+button.unlockButton,
+button.reducButton,
+button.expandButton{
+    display :         none;
+    width :           10px;
+    height :          10px;
+    border:           none;
+    margin:           0 0 0 0;
+    padding:          none;
+    font-family:      "Pictos";
+    font-size:        15px;
+    background-color: transparent;
+    text-align:       center;
+    line-height:      15px;
+    vertical-align:   top;
+}
+
+button.lockButton:hover,
+button.unlockButton:hover,
+button.reducButton:hover,
+button.expandButton:hover{
+    color : rgb(130, 0, 0);
+}
+
+div:hover>input[type="hidden"].reducSection+input[type="hidden"][value="0"].lockSection+div.sectTitle button.lockButton,
+div:hover>input[type="hidden"].reducSection+input[type="hidden"][value="1"].lockSection+div.sectTitle button.unlockButton,
+div:hover>input[type="hidden"][value="0"].reducSection~div.sectTitle button.reducButton,
+div:hover>input[type="hidden"][value="1"].reducSection~div.sectTitle button.expandButton{
+    display : flex;
+}
+
+input[type="hidden"].reducSection[type="hidden"][value="1"]~div.sectContent,
+input[type="hidden"].reducSection[type="hidden"][value="0"]~div.sectReduced{
+    display : none;
+}
+
+span.sectTitle{
+    font-family:      "Caveat";
+    font-weight:      bold;
+    font-size:        25px;
+    background-color: transparent;
+    text-align:       center;
+    line-height:      25px;
+    color:            rgb(183, 137, 55)
+}
+
+/* ************************************************************************************************************************************************ */
+/* General Information */
+/* ************************************************************************************************************************************************ */
+div.infos {
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    justify-content: center;
+    align-items:     center;
+    top:             0;
+    width:           100%;
+    border:          2px solid black;
+    border-radius:   7px;
+    margin:          0 0 1px 0; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+div.infos:hover div.sectTitle{
+    justify-content: space-between;
+}
+
+div.infosLine{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: space-between;
+    align-items:     center;
+    top:             0;
+    width:           100%;
+    border:          none;
+    border-radius:   0;
+    margin:          0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+}
+
+div.infosDet,
+div.infosRank,
+div.infosAvatar{
+    display:          flex;
+    flex-direction:   column;
+    flex-wrap:        nowrap;
+    justify-content:  center;
+    align-items:      center;
+    width:            50%;
+    border:           none;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+}
+
+div.infosRank{
+    width:            30%;
+}
+
+div.infosAvatar{
+    width:            20%;
+}
+
+div.infosDetLine,
+div.infosRankLine,
+div.infosAmbLine{
+    display:          flex;
+    flex-direction:   row;
+    flex-wrap:        nowrap;
+    justify-content:  flex-start;
+    align-items:      center;
+    width:            100%;
+    border:           none;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+}
+
+span.infosDetLabel,
+span.infosRankLabel{
+    width:            75px;
+    height:           28px;
+    border:           none;
+    border-radius:    0;
+    margin:           0 0 0 2px; /*top right bottom left*/
+    background-color: transparent;
+    vertical-align:   center;
+    text-align:       left;
+    line-height:      28px;
+    font-family:      "Courgette";
+    font-weight:      bold;
+    font-size:        12px;
+}
+
+span.infosDetInputLock,
+span.infosDetInput,
+span.infosRankInput,
+span.infosRankInputLock,
+span.infosAmbInputLock{
+    width:            150px;
+    height:           25px;
+    border:           none;
+    border-bottom:    1px solid black;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+    vertical-align:   center;
+    text-align:       left;
+    line-height:      25px;
+    font-family:      "Courgette";
+    font-size:        12px;
+}
+
+span.infosRankInput[Name="attr_infosRank"],
+span.infosRankInput[Name="attr_infosReputation"],
+span.infosRankInputLock[Name="attr_infosExpTotal"],
+span.infosRankInputLock[Name="attr_infosExpAvailable"]{
+    width:            42px;
+    text-align:       center;
+}
+
+input.infosDetInput,
+input.infosRankInput,
+input.infosAmbInput,
+select.infosDetInput,
+select.infosRankInput{
+    width:            150px;
+    height:           26px;
+    border:           none;
+    border-bottom:    1px solid black;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+    text-align:       left;
+    font-family:      "Courgette";
+    font-size:        12px;
+}
+
+input.infosAmbInput,
+span.infosAmbInputLock{
+    width: calc(80% - 75px)
+}
+
+input.infosDetInput,
+input.infosRankInput,
+input.infosAmbInput{
+    height:           25px;
+}
+
+input.infosDetInput[name="attr_infosFDestCust"],
+input.infosDetInput[name="attr_infosSDestCust"],
+input.infosDetInput[name="attr_infosRaceCust"],
+select.infosDetInput[name="attr_infosAngSpec"],
+select.infosDetInput[name="attr_infosVasSpec"]{
+    margin : 0 0 0 2px;
+    display: none;
+}
+
+img.infosAvatar{
+    max-height : 140px;
+}
+
+input[type="hidden"][Name="attr_infosFDest"][value="classCus"].toggleMenus~div.infos>input[type="hidden"][value="0"].lockSection~div.sectContent input.infosDetInput[name="attr_infosFDestCust"],
+input[type="hidden"][Name="attr_infosSDest"][value="classCus"].toggleMenus~div.infos>input[type="hidden"][value="0"].lockSection~div.sectContent input.infosDetInput[name="attr_infosSDestCust"],
+input[type="hidden"][Name="attr_infosRace"][value="raceCustom"].toggleMenus~div.infos>input[type="hidden"][value="0"].lockSection~div.sectContent input.infosDetInput[name="attr_infosRaceCust"],
+input[type="hidden"][Name="attr_infosRace"][value="raceAngel"].toggleMenus~div.infos>input[type="hidden"][value="0"].lockSection~div.sectContent select.infosDetInput[name="attr_infosAngSpec"],
+input[type="hidden"][Name="attr_infosRace"][value="raceVastaya"].toggleMenus~div.infos>input[type="hidden"][value="0"].lockSection~div.sectContent select.infosDetInput[name="attr_infosVasSpec"]{
+    display: flex;
+}
+
+input[type="hidden"][value="0"].lockSection~div.sectContent span.infosDetInputLock,
+input[type="hidden"][value="0"].lockSection~div.sectContent span.infosRankInputLock,
+input[type="hidden"][value="0"].lockSection~div.sectContent span.infosAmbInputLock,
+input[type="hidden"][value="1"].lockSection~div.sectContent input,
+input[type="hidden"][value="1"].lockSection~div.sectContent select{
+    display : none
+}
+
+input.toggleMenus[type="hidden"][Name="attr_infosFDest"][value="classCus"]~div.infos>input[type="hidden"][value="1"].lockSection~div.sectContent span.infosDetInputLock[name="attr_infosFDest"],
+input.toggleMenus[type="hidden"][Name="attr_infosFDest"]:not([value="classCus"])~div.infos>input[type="hidden"][value="1"].lockSection~div.sectContent span.infosDetInputLock[name="attr_infosFDestCust"],
+input.toggleMenus[type="hidden"][Name="attr_infosSDest"][value="classCus"]~div.infos>input[type="hidden"][value="1"].lockSection~div.sectContent span.infosDetInputLock[name="attr_infosSDest"],
+input.toggleMenus[type="hidden"][Name="attr_infosSDest"]:not([value="classCus"])~div.infos>input[type="hidden"][value="1"].lockSection~div.sectContent span.infosDetInputLock[name="attr_infosSDestCust"],
+input.toggleMenus[type="hidden"][Name="attr_infosRace"][value="raceCustom"]~div.infos>input[type="hidden"][value="1"].lockSection~div.sectContent span.infosDetInputLock[name="attr_infosRace"],
+input.toggleMenus[type="hidden"][Name="attr_infosRace"][value="raceAngel"]~div.infos>input[type="hidden"][value="1"].lockSection~div.sectContent span.infosDetInputLock[name="attr_infosRace"],
+input.toggleMenus[type="hidden"][Name="attr_infosRace"][value="raceVastaya"]~div.infos>input[type="hidden"][value="1"].lockSection~div.sectContent span.infosDetInputLock[name="attr_infosRace"],
+input.toggleMenus[type="hidden"][Name="attr_infosRace"]:not([value="raceCustom"])~div.infos>input[type="hidden"][value="1"].lockSection~div.sectContent span.infosDetInputLock[name="attr_infosRaceCust"],
+input.toggleMenus[type="hidden"][Name="attr_infosRace"]:not([value="raceAngel"])~div.infos>input[type="hidden"][value="1"].lockSection~div.sectContent span.infosDetInputLock[name="attr_infosAngSpec"],
+input.toggleMenus[type="hidden"][Name="attr_infosRace"]:not([value="raceVastaya"])~div.infos>input[type="hidden"][value="1"].lockSection~div.sectContent span.infosDetInputLock[name="attr_infosVasSpec"]
+{
+    display : none
+}
+
+/* ************************************************************************************************************************************************ */
+/* General Information */
+/* ************************************************************************************************************************************************ */
+div.traits {
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    justify-content: center;
+    align-items:     center;
+    top:             0;
+    width:           100%;
+    border:          2px solid black;
+    border-radius:   7px;
+    margin:          0 0 1px 0; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+div.traits:hover div.sectTitle{
+    justify-content: space-between;
+}
+
+div.traitsLine{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: space-between;
+    align-items:     center;
+    top:             0;
+    width:           100%;
+    border:          none;
+    border-radius:   0;
+    margin:          0 0 1px 0; /*top right bottom left*/
+    background-color: transparent;
+}
+
+div.traitsLineCol{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: center;
+    align-items:     center;
+    top:             0;
+    width:           16.5%;
+    border:          none;
+    border-radius:   0;
+    margin:          0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+}
+
+span.traitsHeader,
+span.traitsReduc{
+    border:           none;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+    text-align:       left;
+    font-family:      "Courgette";
+    font-size:        15px;
+}
+
+span.traitsReduc{
+    margin:        0 0 0 0;
+    padding:       none;
+    font-size:     12px;
+    border-bottom: 1px dotted black;
+    font-weight:   bold;
+}
+
+img.traitsLogo{
+    max-width:  133px;
+    max-height: 95px;
+}
+
+input.traitsValue,
+span.traitsValueLock{
+    width:            30px !important;
+    height:           30px !important;
+    border:           2px solid black;
+    border-radius:    50%;
+    margin:           0 0 0 0; /*top right bottom left*/
+    padding:          none !important;
+    background-color: transparent;
+    text-align:       center;
+    font-family:      "Courgette";
+    font-size:        14px;
+    font-weight:      bold;
+}
+
+span.traitsValueLock{
+    width:            26px !important;
+    height:           26px !important;
+    line-height:      26px;
+}
+
+button[type=roll].traitsRoll:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    border:             transparent;
+    box-shadow:         none;   
+}
+
+span.traitsHeader.Ten,
+span.traitsReduc.Ten{
+    color : rgb(0, 0, 0);
+}
+span.traitsHeader.Pre,
+span.traitsReduc.Pre{
+    color : rgb(185, 104, 60);
+}
+span.traitsHeader.Fer,
+span.traitsReduc.Fer{
+    color : rgb(172, 142, 52);
+}
+span.traitsHeader.Dom,
+span.traitsReduc.Dom{
+    color : rgb(201, 36, 36);
+}
+span.traitsHeader.Wit,
+span.traitsReduc.Wit{
+    color : rgb(83, 109, 72);
+}
+span.traitsHeader.Con,
+span.traitsReduc.Con{
+    color : rgb(76, 104, 126);
+}
+
+img.traitsLogo.Ten{
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+}
+img.traitsLogo.Pre{
+    filter: invert(49%) sepia(18%) saturate(1675%) hue-rotate(337deg) brightness(90%) contrast(83%);
+}
+img.traitsLogo.Fer{
+    filter: invert(55%) sepia(100%) saturate(303%) hue-rotate(7deg) brightness(85%) contrast(85%);
+}
+img.traitsLogo.Dom{
+    filter: invert(23%) sepia(80%) saturate(2523%) hue-rotate(346deg) brightness(83%) contrast(94%);
+}
+img.traitsLogo.Wit{
+    filter: invert(43%) sepia(8%) saturate(1605%) hue-rotate(58deg) brightness(88%) contrast(91%);
+}
+img.traitsLogo.Con{
+    filter: invert(34%) sepia(51%) saturate(319%) hue-rotate(164deg) brightness(97%) contrast(83%);
+}
+
+input.traitsValue.Ten,
+span.traitsValueLock.Ten{
+    border:   2px solid rgb(0, 0, 0);
+    color : rgb(0, 0, 0);
+}
+input.traitsValue.Pre,
+span.traitsValueLock.Pre{
+    border:   2px solid rgb(185, 104, 60);
+    color : rgb(185, 104, 60);
+}
+input.traitsValue.Fer,
+span.traitsValueLock.Fer{
+    border:   2px solid rgb(172, 142, 52);
+    color : rgb(172, 142, 52);
+}   
+input.traitsValue.Dom,
+span.traitsValueLock.Dom{
+    border:   2px solid rgb(201, 36, 36);
+    color : rgb(201, 36, 36);
+}
+input.traitsValue.Wit,
+span.traitsValueLock.Wit{
+    border:   2px solid rgb(83, 109, 72);
+    color : rgb(83, 109, 72);
+}
+input.traitsValue.Con,
+span.traitsValueLock.Con{
+    border:   2px solid rgb(76, 104, 126);
+    color : rgb(76, 104, 126);
+}
+
+input[type="hidden"][value="0"].lockSection~div.sectContent span.traitsValueLock,
+input[type="hidden"][value="1"].lockSection~div.sectContent input{
+    display : none
+}
+
+/* ************************************************************************************************************************************************ */
+/* Override all input Number Style */
+/* ************************************************************************************************************************************************ */
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  vertical-align:   middle;
+  -moz-appearance: textfield;
+  text-align: center;
+
+}
+
+/* ************************************************************************************************************************************************ */
+/* Roll Template */
+/* ************************************************************************************************************************************************ */
+/* Smaller margins - remove these if you want the huge default left margin */
+.sheet-rolltemplate-custom {
+    margin-left: -37px;
+  }
+  .withoutavatars .sheet-rolltemplate-custom {
+    margin-left: -7px;
+  }
+  
+  .sheet-rolltemplate-custom .sheet-container {
+    border: 1px solid;
+    /* by default, the border is the same color as the header. You can change this here, e.g. to black */  border-color: var(--header-bg-color);
+  }
+  
+  /* Header formatting - title and subtitle */
+  .sheet-rolltemplate-custom .sheet-header {
+    background-color: var(--header-bg-color);
+    /* change text-align to center to center the header text */  text-align: left;
+    color: var(--header-text-color);
+    padding: 5px;
+  }
+  .sheet-rolltemplate-custom .sheet-title {
+    font-size:1.1em;
+  }
+  .sheet-rolltemplate-custom .sheet-subtitle {
+    font-size:.9em;
+  }
+  
+  /* example colors */
+  .sheet-rolltemplate-custom .sheet-container {
+    /* this is the default color */  --header-bg-color: rgba(112,32,130,1);
+    --header-text-color: #FFF;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-red {
+    --header-bg-color: #F00;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-green {
+    --header-bg-color: #0F0;  --header-text-color: #000;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-ten,
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-Ten {
+    --header-bg-color: rgb(0, 0, 0);  --header-text-color: #ffffff;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-fer,
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-Fer {
+    --header-bg-color: rgb(172, 142, 52);  --header-text-color: #000;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-pre,
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-Pre {
+    --header-bg-color: rgb(185, 104, 60);  --header-text-color: #000;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-dom,
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-Dom {
+    --header-bg-color: rgb(201, 36, 36);  --header-text-color: #000;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-con,
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-Con {
+    --header-bg-color: rgb(76, 104, 126);  --header-text-color: #000;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-wit,
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-Wit {
+    --header-bg-color: rgb(83, 109, 72);  --header-text-color: #000;
+  }
+
+  /* Allprops part */
+  .sheet-rolltemplate-custom .sheet-content {
+    display: grid;
+    background: #FFF;  /* Header formatting - modify the column layout below */  grid-template-columns: auto auto;
+    /* Line height to match default roll template */  line-height:1.4em;
+  }
+  .sheet-rolltemplate-custom .sheet-content > div {
+    padding: 5px;
+  }
+  
+  /* Left column */
+  .sheet-rolltemplate-custom .sheet-content .sheet-key {
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+  }
+  
+  /* Empty rule, use this if you want to change the right column */
+  .sheet-rolltemplate-custom .sheet-value {
+    background : #ffffff
+  }
+  /* Make even-numbered rows grey */
+  .sheet-rolltemplate-custom .sheet-content :nth-child(4n+3),
+  .sheet-rolltemplate-custom .sheet-content :nth-child(4n) {
+    background:#EEE;
+  }
+  
+  /* Description field */
+  .sheet-rolltemplate-custom .sheet-desc {
+    grid-column: span 2;
+    padding: 5px;
+    text-align: center;
+  }

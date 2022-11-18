@@ -1,0 +1,138 @@
+{
+    "btnMenusBioTooltips": "Biographicals",
+    "btnMenusStaTooltips": "Status",
+    "btnMenusAbiTooltips": "Abilities",
+    "btnMenusSpeTooltips": "Magics",
+    "btnMenusPraTooltips": "Prayers",
+    "btnMenusSorTooltips": "Sorcery",
+    "btnMenusInvTooltips": "Inventory",
+    "btnMenusRelTooltips": "Relation and Reputation",
+    "btnMenusNotTooltips": "Campaign's Notes",
+
+    "btnLockInfoTooltips"  : "Lock Informations Section",
+    "btnUnlockInfoTooltips": "Unlock Informations Section",
+    "btnReducInfoTooltips" : "Reduce Informations Section",
+    "btnExpandInfoTooltips": "Expand Informations Section",
+
+    "sectionTitleHead" : "General informations",
+    "sectionTitleTraits" : "Traits",
+
+    "infosLabelName" : "Name:",
+    "infosLabelOrigin": "Origin:",
+    "infosLabelRace": "Race:",
+    "infosLabelFDest": "1st Destiny:",
+    "infosLabelSDest": "2nd Destiny:",
+    "infosLabelRank" : "Rank:",
+    "infosLabelReputation" : "Reputation:",
+    "infosLabelExpTotal" : "Exp Total:",
+    "infosLabelExpAvailable" : "Exp Avail.:",
+    "infosLabelSocialClass" : "Social Class:",
+    "infosLabelAmbition" : "Ambition:",
+
+    "selDefaultOrigin" : "Choose an origin..",
+    "selDefaultRace" : "Choose a Race..",
+    "selDefaultRaceSpe" : "Choose your Race Specialization",
+    "selDefaultDestiny" : "Choose a Destiny..",
+    "selDefaultClassSocial": "Choose a Social Class",
+
+    "plHolRace" : "Name your custom Race",
+    "plHolDest" : "Name your custom Destiny",
+
+    "classArt" : "Artist",
+    "classAss" : "Assassin",
+    "classCou" : "Courtier",
+    "classSch" : "Scholar",
+    "classWar" : "Warrior",
+    "classHea" : "Healer",
+    "classMag" : "Mage",
+    "classMer" : "Merchant",
+    "classNob" : "Noble",
+    "classPal" : "Paladin",
+    "classPir" : "Pirate",
+    "classPri" : "Priest",
+    "classRan" : "Ranger",
+    "classSor" : "Sorcerer",
+    "classThi" : "Thief",
+    "classCus" : "Custom",
+
+    "originBandle": "Bandle",
+    "originBilgewater": "Bilgewater",
+    "originDemacia": "Demacia",
+    "originFreljord": "Freljord",
+    "originIonia": "Ionia",
+    "originNoxus": "Noxus",
+    "originPiltover": "Piltover & Zaun",
+    "originShurima": "Shurima",
+    "originValakut": "Valakut",
+    "originTargon": "Targon",
+    "originPiltover2" : "Piltover",
+    "originZaun" : "Zaun",
+
+    "raceAngel": "Angel",
+    "raceArcana": "Arcana",
+    "raceGobz": "Gob'z",
+    "raceHuman": "Human",
+    "raceIceborn": "Iceborn",
+    "raceJhalut": "Jhalut",
+    "raceMarai": "Maraï",
+    "raceVastaya": "Vastaya",
+    "raceCustom": "Custom",
+
+    "angSpeVirtuous" : "Angel - Virtuous",
+    "angSpeFallen" : "Angel - Fallen",
+
+    "vasSpeArachnid": "Vastaya - Arachnid",
+    "vasSpeBovidae": "Vastaya - Bovidae",
+    "vasSpeCanidae": "Vastaya - Canidae",
+    "vasSpeChiroptera": "Vastaya - Chiroptera",
+    "vasSpeDragon": "Vastaya - Dragon",
+    "vasSpeEquine": "Vastaya - Equine",
+    "vasSpeFeline": "Vastaya - Feline",
+    "vasSpeGoupil": "Vastaya - Goupil",
+    "vasSpeBird": "Vastaya - Bird",
+    "vasSpeSheep": "Vastaya - Sheep",
+    "vasSpePachyderm": "Vastaya - Pachyderm",
+    "vasSpePhoenix": "Vastaya - Phoenix",
+    "vasSpePrimate": "Vastaya - Primate",
+    "vasSpeRaptor": "Vastaya - Raptor",
+    "vasSpeReptile": "Vastaya - Reptile",
+    "vasSpeRodent": "Vastaya - Rodent",
+    "vasSpeSaurian": "Vastaya - Saurian",
+    "vasSpeTestudine": "Vastaya - Testudine",
+    "vasSpeUrsid": "Vastaya - Ursid",
+
+    "socialClassWretched": "Wretched",
+    "socialClassSordid": "Sordid",
+    "socialClassPoor": "Poor",
+    "socialClassModest": "Modest",
+    "socialClassComfortable": "Comfortable",
+    "socialClassRich": "Rich",
+    "socialClassArtistocrat": "Artistocrat",
+
+    "traitsTenacity" : "Tenacity",
+    "traitsPrecision" : "Precision",
+    "traitsFerocity" : "Ferocity",
+    "traitsDomination" : "Domination",
+    "traitsWits" : "Wits",
+    "traitsConcentration" : "Concentration",
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "rollTypePure" : " - Pure",
+    "rollTypeTrained" : " - Trained",
+    "rollTypeUntrained" : " - Untrained",
+    "rollTypeSpecialized" : " - Specialized",
+    "RollActionAct" : "Action",
+    "RollActionAtt" : "Attack",
+    "RollActionDmg" : "Damage"
+}

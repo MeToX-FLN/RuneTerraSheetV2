@@ -1,0 +1,525 @@
+<div class="runeterra-charsheet">
+    <input type="hidden" class="toggleTab" name="attr_toggleTab" value="Bio">
+    <input type="hidden" class="toggleMenus" name="attr_infosRace" value="">
+    <input type="hidden" class="toggleMenus" name="attr_infosFDest" value="">
+    <input type="hidden" class="toggleMenus" name="attr_infosSDest" value="">
+    
+<!--***********************************************************************************************************************************************
+Logo
+************************************************************************************************************************************************-->
+    <div class="logoSheet">
+        <img class="logoCadre" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/LogoV2.png?raw=true">
+        <img class="logoTitle" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/TitleV2.png?raw=true">
+        <img class="logoCadre" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/LogoV2.png?raw=true">
+    </div>
+<!--***********************************************************************************************************************************************
+Menus
+************************************************************************************************************************************************-->
+    <div class="menus">
+        <button type="action" class="menus-button" name="act_tabChg" value="Bio" data-i18n-title="btnMenusBioTooltips">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Biographical.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Sta" data-i18n-title="btnMenusStaTooltips">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Status.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Abi" data-i18n-title="btnMenusAbiTooltips">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Ability.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Art" data-i18n-title="classArt">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Artist.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Ass" data-i18n-title="classAss">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Assassin.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Cou" data-i18n-title="classCou">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Courtier.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Sch" data-i18n-title="classSch">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Scholar.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="War" data-i18n-title="classWar">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Warrior.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Hea" data-i18n-title="classHea">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Healer.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Mag" data-i18n-title="btnMenusSpeTooltips">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Mage.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Mer" data-i18n-title="classMer">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Merchant.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Nob" data-i18n-title="classNob">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Noble.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Pal" data-i18n-title="classPal">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Paladin.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Pir" data-i18n-title="classPir">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Pirate.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Pri" data-i18n-title="btnMenusPraTooltips">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Prayers.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Ran" data-i18n-title="classRan">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Ranger.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Sor" data-i18n-title="btnMenusSorTooltips">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Sorcerer.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Thi" data-i18n-title="classThi">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Thief.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Cus" data-i18n-title="classCus">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Custom.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Inv" data-i18n-title="btnMenusInvTooltips">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Inventory.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Rel" data-i18n-title="btnMenusRelTooltips">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Relation.png?raw=true">
+        </button>
+        <button type="action" class="menus-button" name="act_tabChg" value="Not" data-i18n-title="btnMenusNotTooltips">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Note.png?raw=true">
+        </button>
+    </div>
+
+<!--***********************************************************************************************************************************************
+General Informations
+************************************************************************************************************************************************-->
+    <div class="infos">
+        <input type="hidden" name="attr_redInfo" value="0" class="reducSection">
+        <input type="hidden" name="attr_lockInfo" value="0" class="lockSection">
+        <div class="sectTitle">
+            <button class="lockButton" type="action" name="act_lockSect" value="lockInfo" data-i18n-title="btnLockInfoTooltips">)</button>
+            <button class="unlockButton" type="action" name="act_lockSect" value="lockInfo" data-i18n-title="btnUnlockInfoTooltips">(</button>
+            <span class="sectTitle" data-i18n="sectionTitleHead"></span>
+            <button class="reducButton" type="action" name="act_expSect" value="redInfo" data-i18n-title="btnReducInfoTooltips">_</button>
+            <button class="expandButton" type="action" name="act_expSect" value="redInfo" data-i18n-title="btnExpandInfoTooltips">&</button>
+        </div>
+        <div class="sectContent">
+            <div class="infosLine">
+                <div class="infosDet">
+                    <div class="infosDetLine">
+                        <span class="infosDetLabel" data-i18n="infosLabelName"></span>
+                        <span class="infosDetInput" name="attr_character_name"></span>
+                    </div>
+                    <div class="infosDetLine">
+                        <span class="infosDetLabel" data-i18n="infosLabelOrigin"></span>
+                        <select class="infosDetInput" name="attr_infosOrigin">
+                            <option data-i18n="selDefaultOrigin" value="selDefaultOrigin" selected></option>
+                            <option data-i18n="originBandle" value="originBandle"></option>
+                            <option data-i18n="originBilgewater" value="originBilgewater"></option>
+                            <option data-i18n="originDemacia" value="originDemacia"></option>
+                            <option data-i18n="originFreljord" value="originFreljord"></option>
+                            <option data-i18n="originIonia" value="originIonia"></option>
+                            <option data-i18n="originNoxus" value="originNoxus"></option>
+                            <option data-i18n="originPiltover" value="originPiltover"></option>
+                            <option data-i18n="originShurima" value="originShurima"></option>
+                            <option data-i18n="originValakut" value="originValakut"></option>
+                            <option data-i18n="originTargon" value="originTargon"></option>
+                        </select>
+                        <span class="infosDetInputLock" name="attr_infosOrigin" data-i18n-dynamic></span>
+                    </div>
+                    <div class="infosDetLine">
+                        <span class="infosDetLabel" data-i18n="infosLabelRace"></span>
+                        <select class="infosDetInput" name="attr_infosRace">
+                            <option data-i18n="selDefaultRace" value="selDefaultRace" selected></option>
+                            <option data-i18n="raceAngel" value="raceAngel"></option>
+                            <option data-i18n="raceArcana" value="raceArcana"></option>
+                            <option data-i18n="raceGobz" value="raceGobz"></option>
+                            <option data-i18n="raceHuman" value="raceHuman"></option>
+                            <option data-i18n="raceIceborn" value="raceIceborn"></option>
+                            <option data-i18n="raceJhalut" value="raceJhalut"></option>
+                            <option data-i18n="raceMarai" value="raceMarai"></option>
+                            <option data-i18n="raceVastaya" value="raceVastaya"></option>
+                            <option data-i18n="raceCustom" value="raceCustom"></option>
+                        </select>
+                        <input type="text" class="infosDetInput" name="attr_infosRaceCust" data-i18n-placeholder="plHolRace"/>
+                        <select class="infosDetInput" name="attr_infosVasSpec">
+                            <option data-i18n="selDefaultRaceSpe" value="" selected></option>
+                            <option data-i18n="vasSpeArachnid" value="vasSpeArachnid"></option>
+                            <option data-i18n="vasSpeBovidae" value="vasSpeBovidae"></option>
+                            <option data-i18n="vasSpeCanidae" value="vasSpeCanidae"></option>
+                            <option data-i18n="vasSpeChiroptera" value="vasSpeChiroptera"></option>
+                            <option data-i18n="vasSpeDragon" value="vasSpeDragon"></option>
+                            <option data-i18n="vasSpeEquine" value="vasSpeEquine"></option>
+                            <option data-i18n="vasSpeFeline" value="vasSpeFeline"></option>
+                            <option data-i18n="vasSpeGoupil" value="vasSpeGoupil"></option>
+                            <option data-i18n="vasSpeBird" value="vasSpeBird"></option>
+                            <option data-i18n="vasSpeSheep" value="vasSpeSheep"></option>
+                            <option data-i18n="vasSpePachyderm" value="vasSpePachyderm"></option>
+                            <option data-i18n="vasSpePhoenix" value="vasSpePhoenix"></option>
+                            <option data-i18n="vasSpePrimate" value="vasSpePrimate"></option>
+                            <option data-i18n="vasSpeRaptor" value="vasSpeRaptor"></option>
+                            <option data-i18n="vasSpeReptile" value="vasSpeReptile"></option>
+                            <option data-i18n="vasSpeRodent" value="vasSpeRodent"></option>
+                            <option data-i18n="vasSpeSaurian" value="vasSpeSaurian"></option>
+                            <option data-i18n="vasSpeTestudine" value="vasSpeTestudine"></option>
+                            <option data-i18n="vasSpeUrsid" value="vasSpeUrsid"></option>
+                        </select>
+                        <select class="infosDetInput" name="attr_infosAngSpec">
+                            <option data-i18n="selDefaultRaceSpe" value="" selected></option>
+                            <option data-i18n="angSpeVirtuous" value="angSpeVirtuous"></option>
+                            <option data-i18n="angSpeFallen" value="angSpeFallen"></option>
+                        </select>
+                        <span class="infosDetInputLock" name="attr_infosRace" data-i18n-dynamic></span>
+                        <span class="infosDetInputLock" name="attr_infosRaceCust"></span>
+                        <span class="infosDetInputLock" name="attr_infosVasSpec" data-i18n-dynamic></span>
+                        <span class="infosDetInputLock" name="attr_infosAngSpec" data-i18n-dynamic></span>
+                    </div>
+                    <div class="infosDetLine">
+                        <span class="infosDetLabel" data-i18n="infosLabelFDest"></span>
+                        <select class="infosDetInput" name="attr_infosFDest">
+                            <option data-i18n="selDefaultDestiny" value="selDefaultDestiny" selected></option>
+                            <option data-i18n="classArt" value="classArt"></option>
+                            <option data-i18n="classAss" value="classAss"></option>
+                            <option data-i18n="classCou" value="classCou"></option>
+                            <option data-i18n="classSch" value="classSch"></option>
+                            <option data-i18n="classWar" value="classWar"></option>
+                            <option data-i18n="classHea" value="classHea"></option>
+                            <option data-i18n="classMag" value="classMag"></option>
+                            <option data-i18n="classMer" value="classMer"></option>
+                            <option data-i18n="classNob" value="classNob"></option>
+                            <option data-i18n="classPal" value="classPal"></option>
+                            <option data-i18n="classPir" value="classPir"></option>
+                            <option data-i18n="classPri" value="classPri"></option>
+                            <option data-i18n="classRan" value="classRan"></option>
+                            <option data-i18n="classSor" value="classSor"></option>
+                            <option data-i18n="classThi" value="classThi"></option>
+                            <option data-i18n="classCus" value="classCus"></option>
+                        </select>
+                        <input type="text" class="infosDetInput" name="attr_infosFDestCust" data-i18n-placeholder="plHolDest"/>
+                        <span class="infosDetInputLock" name="attr_infosFDest" data-i18n-dynamic></span>
+                        <span class="infosDetInputLock" name="attr_infosFDestCust"></span>
+                    </div>
+                    <div class="infosDetLine">
+                        <span class="infosDetLabel" data-i18n="infosLabelSDest"></span>
+                        <select class="infosDetInput" name="attr_infosSDest">
+                            <option data-i18n="selDefaultDestiny" value="selDefaultDestiny" selected></option>
+                            <option data-i18n="classArt" value="classArt"></option>
+                            <option data-i18n="classAss" value="classAss"></option>
+                            <option data-i18n="classCou" value="classCou"></option>
+                            <option data-i18n="classSch" value="classSch"></option>
+                            <option data-i18n="classWar" value="classWar"></option>
+                            <option data-i18n="classHea" value="classHea"></option>
+                            <option data-i18n="classMag" value="classMag"></option>
+                            <option data-i18n="classMer" value="classMer"></option>
+                            <option data-i18n="classNob" value="classNob"></option>
+                            <option data-i18n="classPal" value="classPal"></option>
+                            <option data-i18n="classPir" value="classPir"></option>
+                            <option data-i18n="classPri" value="classPri"></option>
+                            <option data-i18n="classRan" value="classRan"></option>
+                            <option data-i18n="classSor" value="classSor"></option>
+                            <option data-i18n="classThi" value="classThi"></option>
+                            <option data-i18n="classCus" value="classCus"></option>
+                        </select>
+                        <input type="text" class="infosDetInput" name="attr_infosSDestCust" data-i18n-placeholder="plHolDest"/>
+                        <span class="infosDetInputLock" name="attr_infosSDest" data-i18n-dynamic></span>
+                        <span class="infosDetInputLock" name="attr_infosSDestCust"></span>
+                    </div>
+                </div>
+                <div class="infosRank">
+                    <div class="infosRankLine">
+                        <span class="infosRankLabel" data-i18n="infosLabelRank"></span>
+                        <span class="infosRankInput" name="attr_infosRank"></span>
+                    </div>
+                    <div class="infosRankLine">
+                        <span class="infosRankLabel" data-i18n="infosLabelReputation"></span>
+                        <span class="infosRankInput" name="attr_infosReputation"></span>
+                    </div>
+                    <div class="infosRankLine">
+                        <span class="infosRankLabel" data-i18n="infosLabelExpTotal"></span>
+                        <input type="number" name="attr_infosExpTotal" class="infosRankInput" min="0" value="0"/>
+                        <span class="infosRankInputLock" name="attr_infosExpTotal"></span>
+                    </div>
+                    <div class="infosRankLine">
+                        <span class="infosRankLabel" data-i18n="infosLabelExpAvailable"></span>
+                        <input type="number" name="attr_infosExpAvailable" class="infosRankInput" min="0" value="0"/>
+                        <span class="infosRankInputLock" name="attr_infosExpAvailable"></span>
+                    </div>
+                    <div class="infosRankLine">
+                        <span class="infosRankLabel" data-i18n="infosLabelSocialClass"></span>
+                        <select class="infosRankInput" name="attr_infosSocialClass">
+                            <option data-i18n="selDefaultClassSocial" value="selDefaultClassSocial" selected></option>
+                            <option data-i18n="socialClassWretched" value="socialClassWretched"></option>
+                            <option data-i18n="socialClassSordid" value="socialClassSordid"></option>
+                            <option data-i18n="socialClassPoor" value="socialClassPoor"></option>
+                            <option data-i18n="socialClassModest" value="socialClassModest"></option>
+                            <option data-i18n="socialClassComfortable" value="socialClassComfortable"></option>
+                            <option data-i18n="socialClassRich" value="socialClassRich"></option>
+                            <option data-i18n="socialClassArtistocrat" value="socialClassArtistocrat"></option>
+                        </select>
+                        <span class="infosRankInputLock" name="attr_infosSocialClass" data-i18n-dynamic></span>
+                    </div>
+                </div>
+                <div class="infosAvatar">
+                    <img name="attr_character_avatar" class="infosAvatar">
+                </div>
+            </div>
+            <div class="infosLine">
+                <div class="infosAmbLine">
+                    <span class="infosDetLabel" data-i18n="infosLabelAmbition"></span>
+                    <input type="text" name="attr_infosAmbition" class="infosAmbInput"/>
+                    <span class="infosAmbInputLock" name="attr_infosAmbition"></span>
+                </div>
+            </div>
+        </div>
+        <div class="sectReduced">
+            info réduite
+        </div>
+    </div>
+<!--***********************************************************************************************************************************************
+Traits
+************************************************************************************************************************************************-->
+    <div class="traits">
+        <input type="hidden" name="attr_redTraits" value="0" class="reducSection">
+        <input type="hidden" name="attr_lockTraits" value="0" class="lockSection">
+        <div class="sectTitle">
+            <button class="lockButton" type="action" name="act_lockSect" value="lockTraits" data-i18n-title="btnLockInfoTooltips">)</button>
+            <button class="unlockButton" type="action" name="act_lockSect" value="lockTraits" data-i18n-title="btnUnlockInfoTooltips">(</button>
+            <span class="sectTitle" data-i18n="sectionTitleTraits"></span>
+            <button class="reducButton" type="action" name="act_expSect" value="redTraits" data-i18n-title="btnReducInfoTooltips">_</button>
+            <button class="expandButton" type="action" name="act_expSect" value="redTraits" data-i18n-title="btnExpandInfoTooltips">&</button>
+        </div>
+        <div class="sectContent">
+            <div class="traitsLine">
+                <div class="traitsLineCol">
+                    <span class="traitsHeader Ten" data-i18n="traitsTenacity"></span>
+                </div>
+                <div class="traitsLineCol">
+                    <span class="traitsHeader Pre" data-i18n="traitsPrecision"></span>
+                </div>
+                <div class="traitsLineCol">
+                    <span class="traitsHeader Fer" data-i18n="traitsFerocity"></span>
+                </div>
+                <div class="traitsLineCol">
+                    <span class="traitsHeader Dom" data-i18n="traitsDomination"></span>
+                </div>
+                <div class="traitsLineCol">
+                    <span class="traitsHeader Wit" data-i18n="traitsWits"></span>
+                </div>
+                <div class="traitsLineCol">
+                    <span class="traitsHeader Con" data-i18n="traitsConcentration"></span>
+                </div>
+            </div>
+            <div class="traitsLine">
+                <div class="traitsLineCol">
+                    <button type="roll" class="traitsRoll" value="&{template:custom}{{color=ten}}{{title=traitsTenacity}}{{type=rollTypePure}}{{trait=traitsTenacity}}{{RollActionAct=[[@{traitsTenacity}d10!!k@{traitsTenacity}]]}}">
+                        <img class="traitsLogo Ten" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/TNC.png?raw=true">
+                    </button>
+                </div>
+                <div class="traitsLineCol">
+                    <button type="roll" class="traitsRoll" value="&{template:custom}{{color=pre}}{{title=traitsPrecision}}{{type=rollTypePure}}{{trait=traitsPrecision}}{{RollActionAct=[[@{traitsPrecision}d10!!k@{traitsPrecision}]]}}">
+                        <img class="traitsLogo Pre" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/PRCV2.png?raw=true">
+                    </button>
+                </div>
+                <div class="traitsLineCol">
+                    <button type="roll" class="traitsRoll" value="&{template:custom}{{color=fer}}{{title=traitsFerocity}}{{type=rollTypePure}}{{trait=traitsFerocity}}{{RollActionAct=[[@{traitsFerocity}d10!!k@{traitsFerocity}]]}}">
+                        <img class="traitsLogo Fer" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/FERV2.png?raw=true">
+                    </button>
+                </div>
+                <div class="traitsLineCol">
+                    <button type="roll" class="traitsRoll" value="&{template:custom}{{color=dom}}{{title=traitsDomination}}{{type=rollTypePure}}{{trait=traitsDomination}}{{RollActionAct=[[@{traitsDomination}d10!!k@{traitsDomination}]]}}">
+                        <img class="traitsLogo Dom" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/DOMV2.png?raw=true">
+                    </button>
+                </div>
+                <div class="traitsLineCol">
+                    <button type="roll" class="traitsRoll" value="&{template:custom}{{color=wit}}{{title=traitsWits}}{{type=rollTypePure}}{{trait=traitsWits}}{{RollActionAct=[[@{traitsWits}d10!!k@{traitsWits}]]}}">
+                        <img class="traitsLogo Wit" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/ASTV2.png?raw=true">
+                    </button>
+                </div>
+                <div class="traitsLineCol">
+                    <button type="roll" class="traitsRoll" value="&{template:custom}{{color=con}}{{title=traitsConcentration}}{{type=rollTypePure}}{{trait=traitsConcentration}}{{RollActionAct=[[@{traitsConcentration}d10!!k@{traitsConcentration}]]}}">
+                        <img class="traitsLogo Con" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/CONV2.png?raw=true">
+                    </button>
+                </div>
+            </div>
+            <div class="traitsLine">
+                <div class="traitsLineCol">
+                    <input type="number" class="traitsValue Ten" name="attr_traitsTenacity" min="0" max="5" value="2">
+                    <span type="number" class="traitsValueLock Ten" name="attr_traitsTenacity">
+                </div>
+                <div class="traitsLineCol">
+                    <input type="number" class="traitsValue Pre" name="attr_traitsPrecision" min="0" max="5" value="2">
+                    <span type="number" class="traitsValueLock Pre" name="attr_traitsPrecision"></span>
+                </div>
+                <div class="traitsLineCol">
+                    <input type="number" class="traitsValue Fer" name="attr_traitsFerocity" min="0" max="5" value="2">
+                    <span type="number" class="traitsValueLock Fer" name="attr_traitsFerocity"></span>
+                </div>
+                <div class="traitsLineCol">
+                    <input type="number" class="traitsValue Dom" name="attr_traitsDomination" min="0" max="5" value="2">
+                    <span type="number" class="traitsValueLock Dom" name="attr_traitsDomination"></span>
+                </div>
+                <div class="traitsLineCol">
+                    <input type="number" class="traitsValue Wit" name="attr_traitsWits" min="0" max="5" value="2">
+                    <span type="number" class="traitsValueLock Wit" name="attr_traitsWits"></span>
+                </div>
+                <div class="traitsLineCol">
+                    <input type="number" class="traitsValue Con" name="attr_traitsConcentration" min="0" max="5" value="2">
+                    <span type="number" class="traitsValueLock Con" name="attr_traitsConcentration"></span>
+                </div>
+            </div>
+        </div>
+        <div class="sectReduced">
+            <div class="traitsLine">
+                <div class="traitsLineCol">
+                    <button type="roll" class="traitsRoll" value="&{template:custom}{{color=ten}}{{title=traitsTenacity}}{{type=rollTypePure}}{{trait=traitsTenacity}}{{RollActionAct=[[@{traitsTenacity}d10!!k@{traitsTenacity}]]}}">
+                        <span class="traitsReduc Ten" data-i18n="traitsTenacity"></span>
+                        <span class="traitsReduc Ten">(</span>
+                        <span class="traitsReduc Ten" name="attr_traitsTenacity"></span>
+                        <span class="traitsReduc Ten">)</span>
+                    </button>
+                </div>
+                <div class="traitsLineCol">
+                    <button type="roll" class="traitsRoll" value="&{template:custom}{{color=pre}}{{title=traitsPrecision}}{{type=rollTypePure}}{{trait=traitsPrecision}}{{RollActionAct=[[@{traitsPrecision}d10!!k@{traitsPrecision}]]}}">
+                        <span class="traitsReduc Pre" data-i18n="traitsPrecision"></span>
+                        <span class="traitsReduc Pre">(</span>
+                        <span class="traitsReduc Pre" name="attr_traitsPrecision"></span>
+                        <span class="traitsReduc Pre">)</span>
+                    </button>
+                </div>
+                <div class="traitsLineCol">
+                    <button type="roll" class="traitsRoll" value="&{template:custom}{{color=fer}}{{title=traitsFerocity}}{{type=rollTypePure}}{{trait=traitsFerocity}}{{RollActionAct=[[@{traitsFerocity}d10!!k@{traitsFerocity}]]}}">
+                        <span class="traitsReduc Fer" data-i18n="traitsFerocity"></span>
+                        <span class="traitsReduc Fer">(</span>
+                        <span class="traitsReduc Fer" name="attr_traitsFerocity"></span>
+                        <span class="traitsReduc Fer">)</span>
+                    </button>
+                </div>
+                <div class="traitsLineCol">
+                    <button type="roll" class="traitsRoll" value="&{template:custom}{{color=dom}}{{title=traitsDomination}}{{type=rollTypePure}}{{trait=traitsDomination}}{{RollActionAct=[[@{traitsDomination}d10!!k@{traitsDomination}]]}}">
+                        <span class="traitsReduc Dom" data-i18n="traitsDomination"></span>
+                        <span class="traitsReduc Dom">(</span>
+                        <span class="traitsReduc Dom" name="attr_traitsDomination"></span>
+                        <span class="traitsReduc Dom">)</span>
+                    </button>
+                </div>
+                <div class="traitsLineCol">
+                    <button type="roll" class="traitsRoll" value="&{template:custom}{{color=wit}}{{title=traitsWits}}{{type=rollTypePure}}{{trait=traitsWits}}{{RollActionAct=[[@{traitsWits}d10!!k@{traitsWits}]]}}">
+                        <span class="traitsReduc Wit" data-i18n="traitsWits"></span>
+                        <span class="traitsReduc Wit">(</span>
+                        <span class="traitsReduc Wit" name="attr_traitsWits"></span>
+                        <span class="traitsReduc Wit">)</span>
+                    </button>
+                </div>
+                <div class="traitsLineCol">
+                    <button type="roll" class="traitsRoll" value="&{template:custom}{{color=con}}{{title=traitsConcentration}}{{type=rollTypePure}}{{trait=traitsConcentration}}{{RollActionAct=[[@{traitsConcentration}d10!!k@{traitsConcentration}]]}}">
+                        <span class="traitsReduc Con" data-i18n="traitsConcentration"></span>
+                        <span class="traitsReduc Con">(</span>
+                        <span class="traitsReduc Con" name="attr_traitsConcentration"></span>
+                        <span class="traitsReduc Con">)</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--***********************************************************************************************************************************************
+Roll Template
+************************************************************************************************************************************************-->
+<rolltemplate class="sheet-rolltemplate-custom">
+    <div class="sheet-container sheet-color-{{color}}">
+        <div class="sheet-header">
+            {{#title}}<div class="sheet-title"><span data-i18n="{{title}}"></span></div>{{/title}}
+            <div class="sheet-subtitle">{{#trait}}<span data-i18n="{{trait}}"></span>{{/trait}}{{#type}}<span data-i18n="{{type}}"></span>{{/type}}</div>
+        </div>
+        <div class="sheet-content">
+            {{#allprops() title trait type color desc}}
+            <div class="sheet-key"><span data-i18n="{{key}}"></span></div>
+            <div class="sheet-value">{{value}}</div>
+            {{/allprops() title trait type color desc}}
+            {{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+        </div>
+    </div>
+</rolltemplate>
+<!--***********************************************************************************************************************************************
+Scripts
+************************************************************************************************************************************************-->
+<script type="text/worker">
+    function numberOrZero(input) {
+        var value
+        if(isNaN(input))
+        {
+            value = 0
+        }else
+        {
+            value = Number(input)
+        }
+
+        return value
+    }
+
+    function numberOrTwo(input) {
+        var value
+        if(isNaN(input))
+        {
+            value = 2
+        }else
+        {
+            if(input == "")
+            {
+                value = 2
+            }
+            else
+            {
+                value = Number(input)
+            }
+        }
+
+        return value
+    }
+
+    function textOrDefault(input, val) {
+        var value
+        if(isNaN(input))
+        {
+            value = val
+        }else
+        {
+            value = String(input)
+        }
+
+        return value
+    }
+
+    on('clicked:tabChg', function(eventInfo) {
+        var key = eventInfo.htmlAttributes.value
+        console.log(eventInfo.htmlAttributes)
+        setAttrs({ toggleTab: key.toString()});
+    });
+
+    on('clicked:lockSect', function(eventInfo) {
+        var setObj = {}
+        var key = eventInfo.htmlAttributes.value
+        var act = eventInfo.htmlAttributes.class
+
+        if(act == "lockButton")
+        {
+            setObj[key] = "1"
+        }
+        else
+        {
+            setObj[key] = "0"
+        }
+        setAttrs(setObj);
+    });
+
+    on('clicked:expSect', function(eventInfo) {
+        var setObj = {}
+        var key = eventInfo.htmlAttributes.value
+        var act = eventInfo.htmlAttributes.class
+
+        if(act == "reducButton")
+        {
+            setObj[key] = "1"
+        }
+        else
+        {
+            setObj[key] = "0"
+        }
+        setAttrs(setObj);
+    });
+    
+</script>

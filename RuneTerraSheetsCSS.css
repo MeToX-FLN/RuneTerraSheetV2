@@ -28,6 +28,29 @@ button[type=roll]:hover{
     box-shadow: none;   
 }
 
+/* ************************************************************************************************************************************************ */
+/* Override all repeating section button style */
+/* ************************************************************************************************************************************************ */
+.repcontrol_add:hover,
+.repcontrol_edit:hover{
+    background-color: transparent;
+}
+
+.repcontrol_add,
+.repcontrol_edit,
+.repcontrol_del {
+    display:    block;
+    border:     none;
+    background: transparent;
+    color:    rgb(0, 0, 0);
+    box-shadow: none;
+    font-size: 12px;
+    font-family: "Courgette";
+}
+
+.charsheet .repcontrol_del{
+    font-family: "Pictos";
+}
 
 /* ************************************************************************************************************************************************ */
 /* Logo */
@@ -43,7 +66,8 @@ div.logoSheet {
     border:          none;
     border-radius:   7px;
     margin:          0 0 1px 0; /*top right bottom left*/
-    background-color: rgba(0, 0, 0, 0.2)
+    background-color: rgba(0, 0, 0, 0.2);
+    place-self:      center;
 }
 
 img.logoCadre{
@@ -215,7 +239,6 @@ div.sectTitle{
     flex-wrap:       nowrap;
     justify-content: center;
     align-items:     top;
-    top:             0;
     width:           100%;
     height:          25px;
     border:          none;
@@ -229,7 +252,7 @@ div.sectReduced{
     width:           100%;
     border:          none;
     border-radius:   0;
-    margin:          0 0 0 0; /*top right bottom left*/
+    margin:          0 0 1px 0; /*top right bottom left*/
     background-color: transparent;
 }
 
@@ -468,7 +491,7 @@ input.toggleMenus[type="hidden"][Name="attr_infosRace"]:not([value="raceVastaya"
 }
 
 /* ************************************************************************************************************************************************ */
-/* General Information */
+/* Traits */
 /* ************************************************************************************************************************************************ */
 div.traits {
     display:         flex;
@@ -645,6 +668,989 @@ span.traitsValueLock.Con{
 input[type="hidden"][value="0"].lockSection~div.sectContent span.traitsValueLock,
 input[type="hidden"][value="1"].lockSection~div.sectContent input{
     display : none
+}
+
+/* ************************************************************************************************************************************************ */
+/* BioGraphical */
+/* ************************************************************************************************************************************************ */
+div.bio {
+    display:         none;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    border:          none;
+    border-radius:   7px;
+    margin:          0 0 1px 0; /*top right bottom left*/
+    background-color: transparent
+}
+
+input.toggleTab[type="hidden"][value="Bio"]~div.bio
+{
+    display : flex;
+    
+}
+
+/* ************************************************************************************************************************************************ */
+/* Physical Details */
+/* ************************************************************************************************************************************************ */
+div.phyDet {
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    justify-content: center;
+    align-items:     center;
+    top:             0;
+    width:           100%;
+    border:          2px solid black;
+    border-radius:   7px;
+    margin:          0 0 1px 0; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+div.phyDet:hover div.sectTitle{
+    justify-content: space-between;
+}
+
+div.phyDetRow,
+div.phyDetRowCol{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: center;
+    align-items:     center;
+    width:           100%;
+}
+
+div.phyDetRowCol{
+    width:           50%;
+}
+
+span.phyDetLabel{
+    width:            75px;
+    height:           25px;
+    border:           none;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+    vertical-align:   center;
+    text-align:       left;
+    line-height:      28px;
+    font-family:      "Courgette";
+    font-weight:      bold;
+    font-size:        12px;
+}
+
+select.phyDetInput,
+input.phyDetInput,
+span.phyDetValueLock{
+    width:            150px;
+    height:           26px;
+    border:           none;
+    border-bottom:    1px solid black;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    padding:          0 0 0 0;
+    background-color: transparent;
+    vertical-align:   center;
+    text-align:       left;
+    line-height:      26px;
+    font-family:      "Courgette";
+    font-size:        12px;
+}
+
+input[type="hidden"][value="0"].lockSection~div.sectContent span.phyDetValueLock,
+input[type="hidden"][value="1"].lockSection~div.sectContent input,
+input[type="hidden"][value="1"].lockSection~div.sectContent select{
+    display : none
+}
+
+/* ************************************************************************************************************************************************ */
+/* Family Details */
+/* ************************************************************************************************************************************************ */
+div.famDet {
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    justify-content: center;
+    align-items:     center;
+    top:             0;
+    width:           100%;
+    border:          2px solid black;
+    border-radius:   7px;
+    margin:          0 0 1px 0; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+div.famDet:hover div.sectTitle{
+    justify-content: space-between;
+}
+
+div.famDetRow,
+div.famDetRowCol{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: center;
+    align-items:     center;
+    width:           100%;
+}
+
+div.famDetRowCol{
+    width:           50%;
+}
+
+span.famDetLabel{
+    width:            75px;
+    height:           25px;
+    border:           none;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+    vertical-align:   center;
+    text-align:       left;
+    line-height:      28px;
+    font-family:      "Courgette";
+    font-weight:      bold;
+    font-size:        12px;
+}
+
+select.famDetInput,
+input.famDetInput,
+span.famDetValueLock{
+    width:            150px;
+    height:           26px;
+    border:           none;
+    border-bottom:    1px solid black;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    padding:          0 0 0 0;
+    background-color: transparent;
+    vertical-align:   center;
+    text-align:       left;
+    line-height:      26px;
+    font-family:      "Courgette";
+    font-size:        12px;
+}
+
+input[type="hidden"][value="0"].lockSection~div.sectContent span.famDetValueLock,
+input[type="hidden"][value="1"].lockSection~div.sectContent input,
+input[type="hidden"][value="1"].lockSection~div.sectContent select,
+input[type="hidden"][value="1"].lockSection~div.sectContent .repcontrol_add,
+input[type="hidden"][value="1"].lockSection~div.sectContent .repcontrol_edit,
+input[type="hidden"][value="1"].lockSection~div.sectContent .repcontrol_del {
+    display : none
+}
+
+/* ************************************************************************************************************************************************ */
+/* Passives & Gifts */
+/* ************************************************************************************************************************************************ */
+div.passGifts {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           844px;
+    border:          none;
+    border-radius:   7px;
+    margin:          0 0 0 0; /*top right bottom left*/
+    background-color: transparent
+}
+/* ************************************************************************************************************************************************ */
+/* Passives */
+/* ************************************************************************************************************************************************ */
+div.pasDet {
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    justify-content: flex-start;
+    align-items:     center;
+    width:           50%;
+    border:          2px solid black;
+    border-radius:   7px;
+    margin:          0 1px 1px 0; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+div.pasDet:hover div.sectTitle{
+    justify-content: space-between;
+}
+
+textarea.pasDet,
+textarea.pasDetValueLock {
+    width:            calc(100% - 6px);
+    margin:           1px 1px 1px 1px;
+    border:           0px;
+    outline:          0px;
+    border:           1px solid #000;
+    border-radius:    7px;
+    background-color: transparent;
+    vertical-align:   middle;
+    height:           150px;
+    padding:          1px 1px 1px 1px;
+    align-self:       center;
+    justify-self:     center;
+    resize:           none;
+    font-family:      "Courgette";
+}
+
+input[type="hidden"][value="0"].lockSection~div.sectContent textarea.pasDetValueLock,
+input[type="hidden"][value="1"].lockSection~div.sectContent textarea.pasDet
+{
+    display : none
+}
+
+input[type="hidden"][value="1"].reducSectionPasDet+div.pasDet{
+    height : 25px;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Gifts */
+/* ************************************************************************************************************************************************ */
+div.gifDet {
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    justify-content: flex-start;
+    align-items:     center;
+    width:           50%;
+    min-height:      25px;
+    border:          2px solid black;
+    border-radius:   7px;
+    margin:          0 0 1px 1px; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+div.gifDet:hover div.sectTitle{
+    justify-content: space-between;
+}
+
+textarea.gifDet,
+textarea.gifDetValueLock {
+    max-width:        calc(100% - 6px);
+    margin:           1px 1px 1px 1px;
+    border:           0px;
+    outline:          0px;
+    border:           1px solid #000;
+    border-radius:    7px;
+    background-color: transparent;
+    vertical-align:   middle;
+    height:           150px;
+    padding:          1px 1px 1px 1px;
+    align-self:       center;
+    justify-self:     center;
+    resize:           none;
+    font-family:      "Courgette";
+}
+
+input[type="hidden"][value="0"].lockSection~div.sectContent textarea.gifDetValueLock,
+input[type="hidden"][value="1"].lockSection~div.sectContent textarea.gifDet
+{
+    display : none
+}
+
+input[type="hidden"][value="1"].reducSectionGifDet+div.gifDet{
+    height : 25px;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Background */
+/* ************************************************************************************************************************************************ */
+div.backDet {
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    justify-content: flex-start;
+    align-items:     center;
+    width:           100%;
+    min-height:      25px;
+    border:          2px solid black;
+    border-radius:   7px;
+    margin:          0 0 1px 1px; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+div.backDet:hover div.sectTitle{
+    justify-content: space-between;
+}
+
+textarea.backDet,
+textarea.backDetValueLock {
+    max-width:        calc(100% - 6px);
+    margin:           1px 1px 1px 1px;
+    border:           0px;
+    outline:          0px;
+    border:           1px solid #000;
+    border-radius:    7px;
+    background-color: transparent;
+    vertical-align:   middle;
+    height:           350px;
+    padding:          1px 1px 1px 1px;
+    align-self:       center;
+    justify-self:     center;
+    resize:           none;
+    font-family:      "Courgette";
+}
+
+input[type="hidden"][value="0"].lockSection~div.sectContent textarea.backDetValueLock,
+input[type="hidden"][value="1"].lockSection~div.sectContent textarea.backDet
+{
+    display : none
+}
+/* ************************************************************************************************************************************************ */
+/* Status */
+/* ************************************************************************************************************************************************ */
+div.status {
+    display:         none;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    border:          none;
+    border-radius:   7px;
+    margin:          0 0 1px 0; /*top right bottom left*/
+    background-color: transparent
+}
+
+input.toggleTab[type="hidden"][value="Sta"]~div.status
+{
+    display : flex;
+    
+}
+
+/* ************************************************************************************************************************************************ */
+/* Wounds and Overcharge */
+/* ************************************************************************************************************************************************ */
+div.wndsOver {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           844px;
+    border:          none;
+    border-radius:   7px;
+    margin:          0 0 0 0; /*top right bottom left*/
+    background-color: transparent
+}
+
+/* ************************************************************************************************************************************************ */
+/* Wounds */
+/* ************************************************************************************************************************************************ */
+div.wnds {
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    justify-content: flex-start;
+    align-items:     center;
+    width:           70%;
+    min-height:      25px;
+    border:          2px solid black;
+    border-radius:   7px;
+    margin:          0 0 1px 1px; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+div.wnds:hover div.sectTitle{
+    justify-content: space-between;
+}
+
+div.wndsRow{
+    display:          flex;
+    flex-direction:   row;
+    flex-wrap:        nowrap;
+    justify-content:  space-around;
+    align-items:      center;
+    width:            100%;
+    min-height:       25px;
+    border:           none;
+    border-radius:    7px;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+}
+
+div.wndsRowCol{
+    display:          flex;
+    flex-direction:   row;
+    flex-wrap:        nowrap;
+    justify-content:  center;
+    align-items:      center;
+    width:            100%;
+    min-height:       25px;
+    border:           none;
+    border-radius:    7px;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+}
+
+span.wndsLabel{
+    width:            75px;
+    height:           25px;
+    border:           none;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+    vertical-align:   center;
+    text-align:       left;
+    line-height:      28px;
+    font-family:      "Courgette";
+    font-weight:      bold;
+    font-size:        12px;
+}
+
+span.wndsValueLock,
+span.wndsValue{
+    width:            75px;
+    height:           26px;
+    border:           none;
+    border-bottom:    1px solid black;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+    vertical-align:   center;
+    text-align:       left;
+    line-height:      26px;
+    font-family:      "Courgette";
+    font-size:        12px;
+}
+
+span.wndsHpRange{
+    font-size :     12px;
+    width :         100%;
+    height:         15px;
+    line-height:    15px;
+    text-align:     center;
+    font-weight:    900;
+    margin:         2px 2px 2px 2px;
+    vertical-align: middle;
+}
+
+input.wndsValue{
+    width:            75px !important;
+    height:           26px;
+    border:           none;
+    border-bottom:    1px solid black;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    padding:          0 0 0 0;
+    background-color: transparent;
+    vertical-align:   center;
+    text-align:       left;
+    line-height:      26px;
+    font-family:      "Courgette";
+    font-size:        12px;
+}
+
+input[type="hidden"][value="0"].lockSection~div.sectContent span.wndsValueLock,
+input[type="hidden"][value="1"].lockSection~div.sectContent input{
+    display: none;
+}
+
+input.toggleHPRange[value="0"]+span.wndsHpRange{
+    background: -webkit-linear-gradient(0deg,red 0%, green 0% 100%);
+}
+input.toggleHPRange[value="1"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 1%, green 1% 100%);
+}
+input.toggleHPRange[value="2"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 2%, green 2% 100%);
+}
+input.toggleHPRange[value="3"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 3%, green 3% 100%);
+}
+input.toggleHPRange[value="4"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 4%, green 4% 100%);
+}
+input.toggleHPRange[value="5"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 5%, green 5% 100%);
+}
+input.toggleHPRange[value="6"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 6%, green 6% 100%);
+}
+input.toggleHPRange[value="7"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 7%, green 7% 100%);
+}
+input.toggleHPRange[value="8"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 8%, green 8% 100%);
+}
+input.toggleHPRange[value="9"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 9%, green 9% 100%);
+}
+input.toggleHPRange[value="10"]+span.wndsHpRange {
+    background: linear-gradient(to right,red 0% 10%, green 10% 100%)
+}
+input.toggleHPRange[value="11"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 11%, green 11% 100%);
+}
+input.toggleHPRange[value="12"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 12%, green 12% 100%);
+}
+input.toggleHPRange[value="13"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 13%, green 13% 100%);
+}
+input.toggleHPRange[value="14"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 14%, green 14% 100%);
+}
+input.toggleHPRange[value="15"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 15%, green 15% 100%);
+}
+input.toggleHPRange[value="16"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 16%, green 16% 100%);
+}
+input.toggleHPRange[value="17"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 17%, green 17% 100%);
+}
+input.toggleHPRange[value="18"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 18%, green 18% 100%);
+}
+input.toggleHPRange[value="19"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 19%, green 19% 100%);
+}
+input.toggleHPRange[value="20"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 20%, green 20% 100%);
+}
+input.toggleHPRange[value="21"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 21%, green 21% 100%);
+}
+input.toggleHPRange[value="22"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 22%, green 22% 100%);
+}
+input.toggleHPRange[value="23"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 23%, green 23% 100%);
+}
+input.toggleHPRange[value="24"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 24%, green 24% 100%);
+}
+input.toggleHPRange[value="25"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 25%, green 25% 100%);
+}
+input.toggleHPRange[value="26"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 26%, green 26% 100%);
+}
+input.toggleHPRange[value="27"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 27%, green 27% 100%);
+}
+input.toggleHPRange[value="28"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 28%, green 28% 100%);
+}
+input.toggleHPRange[value="29"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 29%, green 29% 100%);
+}
+input.toggleHPRange[value="30"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 30%, green 30% 100%);
+}
+input.toggleHPRange[value="31"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 31%, green 31% 100%);
+}
+input.toggleHPRange[value="32"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 32%, green 32% 100%);
+}
+input.toggleHPRange[value="33"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 33%, green 33% 100%);
+}
+input.toggleHPRange[value="34"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 34%, green 34% 100%);
+}
+input.toggleHPRange[value="35"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 35%, green 35% 100%);
+}
+input.toggleHPRange[value="36"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 36%, green 36% 100%);
+}
+input.toggleHPRange[value="37"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 37%, green 37% 100%);
+}
+input.toggleHPRange[value="38"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 38%, green 38% 100%);
+}
+input.toggleHPRange[value="39"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 39%, green 39% 100%);
+}
+input.toggleHPRange[value="40"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 40%, green 40% 100%);
+}
+input.toggleHPRange[value="41"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 41%, green 41% 100%);
+}
+input.toggleHPRange[value="42"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 42%, green 42% 100%);
+}
+input.toggleHPRange[value="43"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 43%, green 43% 100%);
+}
+input.toggleHPRange[value="44"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 44%, green 44% 100%);
+}
+input.toggleHPRange[value="45"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 45%, green 45% 100%);
+}
+input.toggleHPRange[value="46"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 46%, green 46% 100%);
+}
+input.toggleHPRange[value="47"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 47%, green 47% 100%);
+}
+input.toggleHPRange[value="48"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 48%, green 48% 100%);
+}
+input.toggleHPRange[value="49"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 49%, green 49% 100%);
+}
+input.toggleHPRange[value="50"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 50%, green 50% 100%);
+}
+input.toggleHPRange[value="51"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 51%, green 51% 100%);
+}
+input.toggleHPRange[value="52"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 52%, green 52% 100%);
+}
+input.toggleHPRange[value="53"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 53%, green 53% 100%);
+}
+input.toggleHPRange[value="54"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 54%, green 54% 100%);
+}
+input.toggleHPRange[value="55"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 55%, green 55% 100%);
+}
+input.toggleHPRange[value="56"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 56%, green 56% 100%);
+}
+input.toggleHPRange[value="57"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 57%, green 57% 100%);
+}
+input.toggleHPRange[value="58"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 58%, green 58% 100%);
+}
+input.toggleHPRange[value="59"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 59%, green 59% 100%);
+}
+input.toggleHPRange[value="60"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 60%, green 60% 100%);
+}
+input.toggleHPRange[value="61"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 61%, green 61% 100%);
+}
+input.toggleHPRange[value="62"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 62%, green 62% 100%);
+}
+input.toggleHPRange[value="63"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 63%, green 63% 100%);
+}
+input.toggleHPRange[value="64"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 64%, green 64% 100%);
+}
+input.toggleHPRange[value="65"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 65%, green 65% 100%);
+}
+input.toggleHPRange[value="66"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 66%, green 66% 100%);
+}
+input.toggleHPRange[value="67"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 67%, green 67% 100%);
+}
+input.toggleHPRange[value="68"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 68%, green 68% 100%);
+}
+input.toggleHPRange[value="69"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 69%, green 69% 100%);
+}
+input.toggleHPRange[value="70"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 70%, green 70% 100%);
+}
+input.toggleHPRange[value="71"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 71%, green 71% 100%);
+}
+input.toggleHPRange[value="72"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 72%, green 72% 100%);
+}
+input.toggleHPRange[value="73"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 73%, green 73% 100%);
+}
+input.toggleHPRange[value="74"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 74%, green 74% 100%);
+}
+input.toggleHPRange[value="75"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 75%, green 75% 100%);
+}
+input.toggleHPRange[value="76"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 76%, green 76% 100%);
+}
+input.toggleHPRange[value="77"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 77%, green 77% 100%);
+}
+input.toggleHPRange[value="78"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 78%, green 78% 100%);
+}
+input.toggleHPRange[value="79"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 79%, green 79% 100%);
+}
+input.toggleHPRange[value="80"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 80%, green 80% 100%);
+}
+input.toggleHPRange[value="81"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 81%, green 81% 100%);
+}
+input.toggleHPRange[value="82"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 82%, green 82% 100%);
+}
+input.toggleHPRange[value="83"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 83%, green 83% 100%);
+}
+input.toggleHPRange[value="84"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 84%, green 84% 100%);
+}
+input.toggleHPRange[value="85"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 85%, green 85% 100%);
+}
+input.toggleHPRange[value="86"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 86%, green 86% 100%);
+}
+input.toggleHPRange[value="87"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 87%, green 87% 100%);
+}
+input.toggleHPRange[value="88"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 88%, green 88% 100%);
+}
+input.toggleHPRange[value="89"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 89%, green 89% 100%);
+}
+input.toggleHPRange[value="90"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 90%, green 90% 100%);
+}
+input.toggleHPRange[value="91"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 91%, green 91% 100%);
+}
+input.toggleHPRange[value="92"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 92%, green 92% 100%);
+}
+input.toggleHPRange[value="93"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 93%, green 93% 100%);
+}
+input.toggleHPRange[value="94"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 94%, green 94% 100%);
+}
+input.toggleHPRange[value="95"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 95%, green 95% 100%);
+}
+input.toggleHPRange[value="96"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 96%, green 96% 100%);
+}
+input.toggleHPRange[value="97"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 97%, green 97% 100%);
+}
+input.toggleHPRange[value="98"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 98%, green 98% 100%);
+}
+input.toggleHPRange[value="99"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 99%, green 99%) 100%;
+}
+input.toggleHPRange[value="100"]+span.wndsHpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 100%, green 100%);
+}
+
+/* ************************************************************************************************************************************************ */
+/* OverCharge */
+/* ************************************************************************************************************************************************ */
+div.over {
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    justify-content: flex-start;
+    align-items:     center;
+    width:           30%;
+    min-height:      25px;
+    border:          2px solid black;
+    border-radius:   7px;
+    margin:          0 0 1px 1px; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+div.over:hover div.sectTitle{
+    justify-content: space-between;
+}
+
+div.overRow{
+    display:          flex;
+    flex-direction:   row;
+    flex-wrap:        nowrap;
+    justify-content:  space-around;
+    align-items:      center;
+    width:            100%;
+    min-height:       25px;
+    border:           none;
+    border-radius:    7px;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+}
+
+span.overLabel{
+    width:            75px;
+    height:           25px;
+    border:           none;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+    vertical-align:   center;
+    text-align:       left;
+    line-height:      28px;
+    font-family:      "Courgette";
+    font-weight:      bold;
+    font-size:        12px;
+}
+
+span.overValueLock,
+span.overValue{
+    width:            75px;
+    height:           26px;
+    border:           none;
+    border-bottom:    1px solid black;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+    vertical-align:   center;
+    text-align:       left;
+    line-height:      26px;
+    font-family:      "Courgette";
+    font-size:        12px;
+}
+
+input.overValue{
+    width:            75px !important;
+    height:           26px;
+    border:           none;
+    border-bottom:    1px solid black;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    padding:          0 0 0 0;
+    background-color: transparent;
+    vertical-align:   center;
+    text-align:       left;
+    line-height:      26px;
+    font-family:      "Courgette";
+    font-size:        12px;
+}
+
+input[type="hidden"][value="0"].lockSection~div.sectContent span.overValueLock,
+input[type="hidden"][value="1"].lockSection~div.sectContent input{
+    display: none;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Injury Levels */
+/* ************************************************************************************************************************************************ */
+div.injuryLevel {
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    justify-content: flex-start;
+    align-items:     center;
+    width:           100%;
+    min-height:      25px;
+    border:          2px solid black;
+    border-radius:   7px;
+    margin:          0 0 1px 1px; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+div.injuryLevel:hover div.sectTitle{
+    justify-content: space-between;
+}
+
+div.injuryLevelTabHeader{
+    display:          flex;
+    flex-direction:   row;
+    flex-wrap:        nowrap;
+    justify-content:  space-between;
+    align-items:      center;
+    width:            calc(100% - 6px);
+    min-height:       25px;
+    border:           1px solid black;
+    border-start-start-radius: 7px;
+    border-start-end-radius: 7px;
+    margin:           0 2px 0 2px; /*top right bottom left*/
+    background-color: transparent;
+}
+
+div.injuryLevelTabValue{
+    display:          flex;
+    flex-direction:   row;
+    flex-wrap:        nowrap;
+    justify-content:  space-between;
+    align-items:      center;
+    width:            calc(100% - 6px);
+    min-height:       25px;
+    border:           1px solid black;
+    border-top:       none;
+    border-end-start-radius: 7px;
+    border-end-end-radius: 7px;
+    margin:           0 2px 0 2px; /*top right bottom left*/
+    background-color: transparent;
+}
+
+div.injuryLevelCol{
+    display:          flex;
+    flex-direction:   row;
+    flex-wrap:        nowrap;
+    justify-content:  center;
+    align-items:      center;
+    width:            12.5%;
+    min-height:       25px;
+    border:           none;
+    border-radius:    0;
+    margin:           0 0 0 0; /*top right bottom left*/
+    background-color: transparent;
+}
+
+div.injuryLevelCol#middle{
+    border-right :   1px solid black;
+    border-left :    1px solid black;
+}
+
+div.injuryLevelCol#end{
+    border-left :    1px solid black;
+}
+
+span.injuryLevelHeader{
+    font-size:        10px;
+    color :         black;
+    margin:           0;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    text-align:       center;
+    height :          20px;
+    width :           80px;
+    font-weight:      bold; 
+    line-height:      20px; 
+    font-family:      "Courgette";
+}
+
+span.injuryLevelValue{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    margin-bottom:    2px;
+    text-align:       center;
+    font-size:        12px;
+    width :           30px;
+    height :          20px;
+    border-bottom:    1px solid black;
+    line-height:      20px;
+    font-family:      "Courgette";
+}
+
+input.injuryLevelValue{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    margin-bottom:    2px;
+    text-align:       center;
+    font-size:        12px;
+    width :           30px !important;
+    height :          20px;
+    border:           none;
+    border-radius:    0;
+    border-bottom:    1px solid black;
+    line-height:      20px;
+    font-family:      "Courgette";
 }
 
 /* ************************************************************************************************************************************************ */

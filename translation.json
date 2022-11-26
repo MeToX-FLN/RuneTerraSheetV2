@@ -24,6 +24,7 @@
     "sectionWounds" : "Wounds",
     "sectionOvercharge" : "Overcharge",
     "sectionInjLvl" : "Injury Levels",
+    "sectionState" : "State",
 
     "infosLabelName" : "Name:",
     "infosLabelOrigin": "Origin:",
@@ -156,7 +157,10 @@
     "relFamNiece" : "Niece",
 
     "wndsLabel" : "Wounds:",
+    "wndsLabelShort" : "Wnds:",
     "wndsModifier" : "Modifier:",
+    "wndsModifierShort" : "Mod:",
+    "wndsStatus" : "Status:",
 
     "overCurrent" : "Current:",
     "overMaximum" : "Maximum:",

@@ -29,6 +29,24 @@ button[type=roll]:hover{
 }
 
 /* ************************************************************************************************************************************************ */
+/* Override all input Number Style */
+/* ************************************************************************************************************************************************ */
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  vertical-align:   middle;
+  -moz-appearance: textfield;
+  text-align: center;
+
+}
+
+/* ************************************************************************************************************************************************ */
 /* Override all repeating section button style */
 /* ************************************************************************************************************************************************ */
 .repcontrol_add:hover,
@@ -1078,6 +1096,10 @@ div.wndsRowCol{
     background-color: transparent;
 }
 
+div.sectReduced div.wndsRowCol{
+    width:            33.3%;
+}
+
 span.wndsLabel{
     width:            75px;
     height:           25px;
@@ -1087,11 +1109,12 @@ span.wndsLabel{
     background-color: transparent;
     vertical-align:   center;
     text-align:       left;
-    line-height:      28px;
+    line-height:      25px;
     font-family:      "Courgette";
     font-weight:      bold;
     font-size:        12px;
 }
+
 
 span.wndsValueLock,
 span.wndsValue{
@@ -1103,10 +1126,19 @@ span.wndsValue{
     margin:           0 0 0 0; /*top right bottom left*/
     background-color: transparent;
     vertical-align:   center;
-    text-align:       left;
+    text-align:       center;
     line-height:      26px;
     font-family:      "Courgette";
     font-size:        12px;
+}
+
+div.sectReduced span.wndsValueLock
+{
+    font-weight:      normal;
+    font-size:        16px;
+    text-align:       center;
+    width:            40px;
+    border:           none;
 }
 
 span.wndsHpRange{
@@ -1120,6 +1152,13 @@ span.wndsHpRange{
     vertical-align: middle;
 }
 
+div.sectReduced span.wndsLabel{
+    font-weight:      normal;
+    font-size:        14px;
+    text-align:       center;
+    width:            50px;
+}
+
 input.wndsValue{
     width:            75px !important;
     height:           26px;
@@ -1130,14 +1169,36 @@ input.wndsValue{
     padding:          0 0 0 0;
     background-color: transparent;
     vertical-align:   center;
-    text-align:       left;
+    text-align:       center;
     line-height:      26px;
     font-family:      "Courgette";
     font-size:        12px;
 }
 
+div.sectReduced input.wndsValue{
+    font-size:        16px;
+    border:           none;
+    width:            40px !important;
+    text-align:       center;
+}
+
+div.sectReduced input.wndsValue:not(:disabled){
+    vertical-align:   middle;
+    -moz-appearance: auto;
+    text-align: center;
+}
+
+div.sectReduced input.wndsValue:not(:disabled)::-webkit-outer-spin-button,
+div.sectReduced input.wndsValue:not(:disabled)::-webkit-inner-spin-button{
+    -webkit-appearance: auto;
+    background-color: transparent ! important;
+    margin: 0;
+}
+
 input[type="hidden"][value="0"].lockSection~div.sectContent span.wndsValueLock,
-input[type="hidden"][value="1"].lockSection~div.sectContent input{
+input[type="hidden"][value="0"].lockSection~div.sectReduced span.wndsValueLock,
+input[type="hidden"][value="1"].lockSection~div.sectContent input,
+input[type="hidden"][value="1"].lockSection~div.sectReduced input[name="attr_wndsAmount"]{
     display: none;
 }
 
@@ -1480,6 +1541,10 @@ div.overRow{
     background-color: transparent;
 }
 
+div.sectReduced div.overRow{
+    justify-content:  center;
+}
+
 span.overLabel{
     width:            75px;
     height:           25px;
@@ -1495,6 +1560,13 @@ span.overLabel{
     font-size:        12px;
 }
 
+div.sectReduced span.overLabel{
+    font-weight:      normal;
+    font-size:        14px;
+    text-align:       center;
+    width:            20px;
+}
+
 span.overValueLock,
 span.overValue{
     width:            75px;
@@ -1505,10 +1577,19 @@ span.overValue{
     margin:           0 0 0 0; /*top right bottom left*/
     background-color: transparent;
     vertical-align:   center;
-    text-align:       left;
+    text-align:       center;
     line-height:      26px;
     font-family:      "Courgette";
     font-size:        12px;
+}
+
+div.sectReduced span.overValueLock
+{
+    font-weight:      normal;
+    font-size:        16px;
+    text-align:       center;
+    width:            50px;
+    border:           none;
 }
 
 input.overValue{
@@ -1521,14 +1602,38 @@ input.overValue{
     padding:          0 0 0 0;
     background-color: transparent;
     vertical-align:   center;
-    text-align:       left;
+    text-align:       center;
     line-height:      26px;
     font-family:      "Courgette";
     font-size:        12px;
 }
 
+div.sectReduced input.overValue,
+div.sectReduced span.overValue{
+    font-size:        16px;
+    border:           none;
+    width:            50px !important;
+    text-align:       center;
+}
+
+div.sectReduced input.overValue:not(:disabled){
+    vertical-align:   middle;
+    -moz-appearance: auto;
+    text-align: center;
+}
+
+div.sectReduced input.overValue:not(:disabled)::-webkit-outer-spin-button,
+div.sectReduced input.overValue:not(:disabled)::-webkit-inner-spin-button{
+    -webkit-appearance: auto;
+    background-color: transparent ! important;
+    margin: 0;
+}
+
+
 input[type="hidden"][value="0"].lockSection~div.sectContent span.overValueLock,
-input[type="hidden"][value="1"].lockSection~div.sectContent input{
+input[type="hidden"][value="0"].lockSection~div.sectReduced span.overValueLock,
+input[type="hidden"][value="1"].lockSection~div.sectContent input:not(:disabled),
+input[type="hidden"][value="1"].lockSection~div.sectReduced input:not(:disabled){
     display: none;
 }
 
@@ -1654,21 +1759,24 @@ input.injuryLevelValue{
 }
 
 /* ************************************************************************************************************************************************ */
-/* Override all input Number Style */
+/* State */
 /* ************************************************************************************************************************************************ */
-/* Chrome, Safari, Edge, Opera */
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+div.state {
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    justify-content: flex-start;
+    align-items:     center;
+    width:           100%;
+    min-height:      25px;
+    border:          2px solid black;
+    border-radius:   7px;
+    margin:          0 0 1px 1px; /*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0.2)
 }
 
-/* Firefox */
-input[type=number] {
-  vertical-align:   middle;
-  -moz-appearance: textfield;
-  text-align: center;
-
+div.state:hover div.sectTitle{
+    justify-content: space-between;
 }
 
 /* ************************************************************************************************************************************************ */

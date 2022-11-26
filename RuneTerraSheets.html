@@ -635,21 +635,27 @@ Wounds
                     </div>
                     <div class="wndsRow">
                         <input type="hidden" class="toggleHPRange" name="attr_wndsPerc" value="0">
-                        <span class="wndsHpRange" name="attr_wndsStat">
+                        <span class="wndsHpRange" name="attr_wndsStatus">
                     </div>
                 </div>
                 <div class="sectReduced">
-                    <!--
-                    <div class="wndsRowCol">
-                        <span class="wndsLabelReduc" data-i18n="wndsLabel"></span>
-                        <input type="number" class="wndsValue" name="attr_wndsAmount" value="0" min="0">
-                        <span class="wndsValueLock" name="attr_wndsAmount"></span>
+                    <div class="wndsRow">
+                        <div class="wndsRowCol">
+                            <span class="wndsLabel" data-i18n="wndsLabelShort"></span>
+                            <input type="number" class="wndsValue" name="attr_wndsAmount" value="0" min="0">
+                            <span class="wndsValueLock" name="attr_wndsAmount"></span>
+                            <span class="wndsLabel">/</span>
+                            <span class="wndsValue" name="attr_hpLevelDead"></span>
+                        </div>
+                        <div class="wndsRowCol">
+                            <span class="wndsLabel" data-i18n="wndsModifierShort"></span>
+                            <span class="wndsValue" name="attr_wndsModifier"></span>
+                        </div>
+                        <div class="wndsRowCol">
+                            <span class="wndsLabel" data-i18n="wndsStatus"></span>
+                            <span class="wndsValue" name="attr_wndsStatus"></span>
+                        </div>
                     </div>
-                    <div class="wndsRowCol">
-                        <span class="wndsLabelReduc" data-i18n="wndsModifier"></span>
-                        <span class="wndsValue" name="attr_wndsModifier"></span>
-                    </div>
-                    -->
                 </div>
             </div>
 <!--***********************************************************************************************************************************************
@@ -673,12 +679,16 @@ Overcharge
                     </div>
                     <div class="overRow">
                         <span class="overLabel" data-i18n="overMaximum"></span>
-                        <input class="overValue" type="number" name="attr_overMaximum" value="(@{traitsConcentration}*5)+@{infosRank}" disabled/>
-                        <!--<span class="overValue" name="attr_overMaximum"></span>-->
+                        <span class="overValue" name="attr_overMaximum"></span>
                     </div>
                 </div>
                 <div class="sectReduced">
-                    
+                    <div class="overRow">
+                        <input type="number" class="overValue" name="attr_overAmount" value="0" min="0">
+                        <span class="overValueLock" name="attr_overAmount"></span>
+                        <span class="overLabel">/</span>
+                        <span class="overValue" name="attr_overMaximum"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -724,31 +734,50 @@ Injury levels
                 </div>
                 <div class="injuryLevelTabValue">
                     <div class="injuryLevelCol">
-                        <input type="hidden" name="attr_hpLevelUnscathed" value="0">
                         <span class="injuryLevelValue" name="attr_hpLevelUnscathed" ></span>
                     </div>
                     <div class="injuryLevelCol" id="middle">
-                        <input class="injuryLevelValue" type="number" name="attr_hpLevelScraped" value="@{traitsTenacity}*5" disabled/>
+                        <span class="injuryLevelValue" name="attr_hpLevelScraped" ></span>
                     </div>
                     <div class="injuryLevelCol">
-                        <input class="injuryLevelValue" type="number" name="attr_hpLevelSlightlyInjured" value="(@{traitsFerocity}*2)+@{hpLevelScraped}" disabled/>
+                        <span class="injuryLevelValue" name="attr_hpLevelSlightlyInjured" ></span>
                     </div>
                     <div class="injuryLevelCol" id="middle">
-                        <input class="injuryLevelValue" type="number" name="attr_hpLevelInjured" value="(@{traitsFerocity}*2)+@{hpLevelSlightlyInjured}" disabled/>
+                        <span class="injuryLevelValue" name="attr_hpLevelInjured" ></span>
                     </div>
                     <div class="injuryLevelCol">
-                        <input class="injuryLevelValue" type="number" name="attr_hpLevelSeriouslyInjured" value="(@{traitsFerocity}*2)+@{hpLevelInjured}" disabled/>
+                        <span class="injuryLevelValue" name="attr_hpLevelSeriouslyInjured" ></span>
                     </div>
                     <div class="injuryLevelCol" id="middle">
-                        <input class="injuryLevelValue" type="number" name="attr_hpLevelImpotent" value="(@{traitsFerocity}*2)+@{hpLevelSeriouslyInjured}" disabled/>
+                        <span class="injuryLevelValue" name="attr_hpLevelImpotent" ></span>
                     </div>
                     <div class="injuryLevelCol">
-                        <input class="injuryLevelValue" type="number" name="attr_hpLevelExhausted" value="(@{traitsFerocity}*2)+@{hpLevelImpotent}" disabled/>
+                        <span class="injuryLevelValue" name="attr_hpLevelExhausted" ></span>
                     </div>
                     <div class="injuryLevelCol" id="end">
-                        <input class="injuryLevelValue" type="number" name="attr_hpLevelDead" value="(@{traitsFerocity}*2)+@{hpLevelExhausted}" disabled/>
+                        <span class="injuryLevelValue" name="attr_hpLevelDead" ></span>
                     </div>
                 </div>
+            </div>
+            <div class="sectReduced">
+                    
+            </div>
+        </div>
+<!--***********************************************************************************************************************************************
+states
+************************************************************************************************************************************************-->
+        <div class="state">
+            <input type="hidden" name="attr_redState" value="0" class="reducSection">
+            <input type="hidden" name="attr_lockState" value="0" class="lockSection">
+            <div class="sectTitle">
+                <button class="lockButton" type="action" name="act_lockSect" value="lockState" data-i18n-title="btnLockInfoTooltips">)</button>
+                <button class="unlockButton" type="action" name="act_lockSect" value="lockState" data-i18n-title="btnUnlockInfoTooltips">(</button>
+                <span class="sectTitle" data-i18n="sectionState"></span>
+                <button class="reducButton" type="action" name="act_expSect" value="redState" data-i18n-title="btnReducInfoTooltips">_</button>
+                <button class="expandButton" type="action" name="act_expSect" value="redState" data-i18n-title="btnExpandInfoTooltips">&</button>
+            </div>
+            <div class="sectContent">
+                
             </div>
             <div class="sectReduced">
                     
@@ -824,6 +853,84 @@ Scripts
         return value
     }
 
+    function calculateOver(){
+        getAttrs(["traitsConcentration"], function(value) {
+            var newVal = numberOrZero(value.traitsConcentration)*5
+            setAttrs({overMaximum : newVal});
+        });
+    }
+
+    function determineWndsLevels(ten, fer){
+        var obj = {}
+        obj["lvl0"] = 0;
+        obj["lvl1"] = ten * 5;
+        obj["lvl2"] = obj.lvl1 + (fer * 2)
+        obj["lvl3"] = obj.lvl2 + (fer * 2)
+        obj["lvl4"] = obj.lvl3 + (fer * 2)
+        obj["lvl5"] = obj.lvl4 + (fer * 2)
+        obj["lvl6"] = obj.lvl5 + (fer * 2)
+        obj["lvl7"] = obj.lvl6 + (fer * 2)
+        return obj
+    }
+
+    function determineWndsStatus(level, wnds){
+        var stat
+        if(wnds < level.lvl1){ stat =  getTranslationByKey("hpLevelUnscathed")}
+        else if(wnds < level.lvl2){ stat =  getTranslationByKey("hpLevelScraped")}
+        else if(wnds < level.lvl3){ stat =  getTranslationByKey("hpLevelSlightlyInjured")}
+        else if(wnds < level.lvl4){ stat =  getTranslationByKey("hpLevelInjured")}
+        else if(wnds < level.lvl5){ stat =  getTranslationByKey("hpLevelSeriouslyInjured")}
+        else if(wnds < level.lvl6){ stat =  hpLevelImpotent("hpLevelImpotent")}
+        else if(wnds < level.lvl7){ stat =  getTranslationByKey("hpLevelExhausted")}
+        else{ stat =  getTranslationByKey("hpLevelDead")}
+
+        return stat
+    }
+
+    function determineWndsMod(level, wnds){
+        var mod
+        if(wnds < level.lvl1){ mod =  0}
+        else if(wnds < level.lvl2){ mod = 3}
+        else if(wnds < level.lvl3){ mod = 5}
+        else if(wnds < level.lvl4){ mod = 10}
+        else if(wnds < level.lvl5){ mod = 15}
+        else if(wnds < level.lvl6){ mod = 20}
+        else if(wnds < level.lvl7){ mod = 40}
+        else{ mod = "X"}
+
+        return mod
+    }
+
+    function calculateWnds(){
+        getAttrs(["traitsTenacity", "traitsFerocity", "wndsAmount"], function(value) {
+            var wnds = numberOrZero(value.wndsAmount)
+            var ten = numberOrZero(value.traitsTenacity)
+            var fer = numberOrZero(value.traitsFerocity)
+            var level = determineWndsLevels(ten, fer)
+            var currStatus = determineWndsStatus(level, wnds)
+            var wndsMod = determineWndsMod(level, wnds)
+            var wndsPer = Math.min(Math.round((wnds/level.lvl7)*100), 100);
+
+            setAttrs({hpLevelUnscathed        : level.lvl0,
+                      hpLevelScraped          : level.lvl1,
+                      hpLevelSlightlyInjured  : level.lvl2,
+                      hpLevelInjured          : level.lvl3,
+                      hpLevelSeriouslyInjured : level.lvl4,
+                      hpLevelImpotent         : level.lvl5,
+                      hpLevelExhausted        : level.lvl6,
+                      hpLevelDead             : level.lvl7,
+                      wndsStatus              : currStatus,
+                      wndsModifier            : wndsMod,
+                      wndsPerc                : wndsPer});
+        });
+    }
+
+    on('sheet:opened', function()
+    {
+        calculateOver();
+        calculateWnds();
+    });
+
     on('clicked:tabChg', function(eventInfo) {
         var key = eventInfo.htmlAttributes.value
         console.log(eventInfo.htmlAttributes)
@@ -862,4 +969,20 @@ Scripts
         setAttrs(setObj);
     });
     
+    on('change:wndsAmount', function(eventInfo) {
+        calculateWnds()
+    });
+
+    on('change:traitsTenacity', function(eventInfo) {
+        calculateWnds()
+    });
+
+    on('change:traitsFerocity', function(eventInfo) {
+        calculateWnds()
+    });
+
+    on('change:traitsConcentration', function(eventInfo) {
+        calculateOver()
+    });
+
 </script>

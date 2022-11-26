@@ -1,4 +1,5 @@
 <div class="runeterra-charsheet">
+    <input type="hidden" class="toggleTab" name="attr_infosRank" value="0">
     <input type="hidden" class="toggleTab" name="attr_toggleTab" value="Bio">
     <input type="hidden" class="toggleMenus" name="attr_infosRace" value="">
     <input type="hidden" class="toggleMenus" name="attr_infosFDest" value="">
@@ -8,79 +9,79 @@
 Logo
 ************************************************************************************************************************************************-->
     <div class="logoSheet">
-        <img class="logoCadre" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/LogoV2.png?raw=true">
-        <img class="logoTitle" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/TitleV2.png?raw=true">
-        <img class="logoCadre" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/LogoV2.png?raw=true">
+        <img class="logoCadre" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/LogoV2.png?raw=true">
+        <img class="logoTitle" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/TitleV2.png?raw=true">
+        <img class="logoCadre" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/LogoV2.png?raw=true">
     </div>
 <!--***********************************************************************************************************************************************
 Menus
 ************************************************************************************************************************************************-->
     <div class="menus">
         <button type="action" class="menus-button" name="act_tabChg" value="Bio" data-i18n-title="btnMenusBioTooltips">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Biographical.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Biographical.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Sta" data-i18n-title="btnMenusStaTooltips">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Status.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Status.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Abi" data-i18n-title="btnMenusAbiTooltips">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Ability.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Ability.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Art" data-i18n-title="classArt">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Artist.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Artist.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Ass" data-i18n-title="classAss">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Assassin.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Assassin.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Cou" data-i18n-title="classCou">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Courtier.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Courtier.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Sch" data-i18n-title="classSch">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Scholar.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Scholar.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="War" data-i18n-title="classWar">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Warrior.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Warrior.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Hea" data-i18n-title="classHea">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Healer.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Healer.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Mag" data-i18n-title="btnMenusSpeTooltips">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Mage.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Mage.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Mer" data-i18n-title="classMer">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Merchant.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Merchant.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Nob" data-i18n-title="classNob">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Noble.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Noble.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Pal" data-i18n-title="classPal">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Paladin.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Paladin.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Pir" data-i18n-title="classPir">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Pirate.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Pirate.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Pri" data-i18n-title="btnMenusPraTooltips">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Prayers.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Prayers.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Ran" data-i18n-title="classRan">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Ranger.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Ranger.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Sor" data-i18n-title="btnMenusSorTooltips">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Sorcerer.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Sorcerer.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Thi" data-i18n-title="classThi">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Thief.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Thief.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Cus" data-i18n-title="classCus">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Custom.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Custom.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Inv" data-i18n-title="btnMenusInvTooltips">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Inventory.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Inventory.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Rel" data-i18n-title="btnMenusRelTooltips">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Relation.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Relation.png?raw=true">
         </button>
         <button type="action" class="menus-button" name="act_tabChg" value="Not" data-i18n-title="btnMenusNotTooltips">
-            <img class="menus-button" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/Note.png?raw=true">
+            <img class="menus-button" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/Note.png?raw=true">
         </button>
     </div>
 
@@ -306,32 +307,32 @@ Traits
             <div class="traitsLine">
                 <div class="traitsLineCol">
                     <button type="roll" class="traitsRoll" value="&{template:custom}{{color=ten}}{{title=traitsTenacity}}{{type=rollTypePure}}{{trait=traitsTenacity}}{{RollActionAct=[[@{traitsTenacity}d10!!k@{traitsTenacity}]]}}">
-                        <img class="traitsLogo Ten" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/TNC.png?raw=true">
+                        <img class="traitsLogo Ten" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/TNC.png?raw=true">
                     </button>
                 </div>
                 <div class="traitsLineCol">
                     <button type="roll" class="traitsRoll" value="&{template:custom}{{color=pre}}{{title=traitsPrecision}}{{type=rollTypePure}}{{trait=traitsPrecision}}{{RollActionAct=[[@{traitsPrecision}d10!!k@{traitsPrecision}]]}}">
-                        <img class="traitsLogo Pre" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/PRCV2.png?raw=true">
+                        <img class="traitsLogo Pre" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/PRCV2.png?raw=true">
                     </button>
                 </div>
                 <div class="traitsLineCol">
                     <button type="roll" class="traitsRoll" value="&{template:custom}{{color=fer}}{{title=traitsFerocity}}{{type=rollTypePure}}{{trait=traitsFerocity}}{{RollActionAct=[[@{traitsFerocity}d10!!k@{traitsFerocity}]]}}">
-                        <img class="traitsLogo Fer" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/FERV2.png?raw=true">
+                        <img class="traitsLogo Fer" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/FERV2.png?raw=true">
                     </button>
                 </div>
                 <div class="traitsLineCol">
                     <button type="roll" class="traitsRoll" value="&{template:custom}{{color=dom}}{{title=traitsDomination}}{{type=rollTypePure}}{{trait=traitsDomination}}{{RollActionAct=[[@{traitsDomination}d10!!k@{traitsDomination}]]}}">
-                        <img class="traitsLogo Dom" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/DOMV2.png?raw=true">
+                        <img class="traitsLogo Dom" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/DOMV2.png?raw=true">
                     </button>
                 </div>
                 <div class="traitsLineCol">
                     <button type="roll" class="traitsRoll" value="&{template:custom}{{color=wit}}{{title=traitsWits}}{{type=rollTypePure}}{{trait=traitsWits}}{{RollActionAct=[[@{traitsWits}d10!!k@{traitsWits}]]}}">
-                        <img class="traitsLogo Wit" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/ASTV2.png?raw=true">
+                        <img class="traitsLogo Wit" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/ASTV2.png?raw=true">
                     </button>
                 </div>
                 <div class="traitsLineCol">
                     <button type="roll" class="traitsRoll" value="&{template:custom}{{color=con}}{{title=traitsConcentration}}{{type=rollTypePure}}{{trait=traitsConcentration}}{{RollActionAct=[[@{traitsConcentration}d10!!k@{traitsConcentration}]]}}">
-                        <img class="traitsLogo Con" src="https://github.com/MeToX-FLN/Roll20Projects/blob/main/RuneTerraV2.0/img/CONV2.png?raw=true">
+                        <img class="traitsLogo Con" src="https://github.com/MeToX-FLN/RuneTerraSheetV2/blob/main/img/CONV2.png?raw=true">
                     </button>
                 </div>
             </div>
@@ -412,6 +413,345 @@ Traits
                         <span class="traitsReduc Con">)</span>
                     </button>
                 </div>
+            </div>
+        </div>
+    </div>
+<!--***********************************************************************************************************************************************
+Biographical
+************************************************************************************************************************************************-->
+    <div class="bio">
+<!--***********************************************************************************************************************************************
+Physical Details
+************************************************************************************************************************************************-->
+        <div class="phyDet">
+            <input type="hidden" name="attr_redPhyDet" value="0" class="reducSection">
+            <input type="hidden" name="attr_lockPhyDet" value="0" class="lockSection">
+            <div class="sectTitle">
+                <button class="lockButton" type="action" name="act_lockSect" value="lockPhyDet" data-i18n-title="btnLockInfoTooltips">)</button>
+                <button class="unlockButton" type="action" name="act_lockSect" value="lockPhyDet" data-i18n-title="btnUnlockInfoTooltips">(</button>
+                <span class="sectTitle" data-i18n="sectionTitlePhysicalDetail"></span>
+                <button class="reducButton" type="action" name="act_expSect" value="redPhyDet" data-i18n-title="btnReducInfoTooltips">_</button>
+                <button class="expandButton" type="action" name="act_expSect" value="redPhyDet" data-i18n-title="btnExpandInfoTooltips">&</button>
+            </div>
+            <div class="sectContent">
+                <div class="phyDetRow">
+                    <div class="phyDetRowCol">
+                        <span class="phyDetLabel" data-i18n="phyDetGender"></span>
+                        <select class="phyDetInput" name="attr_phyDetGender">
+                            <option data-i18n="selDefaultGender" value="selDefaultGender"></option>
+                            <option data-i18n="genderMale" value="genderMale"></option>
+                            <option data-i18n="genderFemale" value="genderFemale"></option>
+                        </select>
+                        <span class="phyDetValueLock" name="attr_phyDetGender" data-i18n-dynamic></span>
+                    </div>
+                    <div class="phyDetRowCol">
+                        <span class="phyDetLabel" data-i18n="phyDetAge"></span>
+                        <input class="phyDetInput" type="text" name="attr_phyDetAge"/>
+                        <span class="phyDetValueLock" name="attr_phyDetAge"></span>
+                    </div>
+                </div>
+                <div class="phyDetRow">
+                    <div class="phyDetRowCol">
+                        <span class="phyDetLabel" data-i18n="phyDetHeight"></span>
+                        <input class="phyDetInput" type="text" name="attr_phyDetHeight"/>
+                        <span class="phyDetValueLock" name="attr_phyDetHeight"></span>
+                    </div>
+                    <div class="phyDetRowCol">
+                        <span class="phyDetLabel" data-i18n="phyDetWeight"></span>
+                        <input class="phyDetInput" type="text" name="attr_phyDetWeight"/>
+                        <span class="phyDetValueLock" name="attr_phyDetWeight"></span>
+                    </div>
+                </div>
+                <div class="phyDetRow">
+                    <div class="phyDetRowCol">
+                        <span class="phyDetLabel" data-i18n="phyDetHair"></span>
+                        <input class="phyDetInput" type="text" name="attr_phyDetHair"/>
+                        <span class="phyDetValueLock" name="attr_phyDetHair"></span>
+                    </div>
+                    <div class="phyDetRowCol">
+                        <span class="phyDetLabel" data-i18n="phyDetEyes"></span>
+                        <input class="phyDetInput" type="text" name="attr_phyDetEyes"/>
+                        <span class="phyDetValueLock" name="attr_phyDetEyes"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="sectReduced">
+
+            </div>
+        </div>
+<!--***********************************************************************************************************************************************
+Family Details
+************************************************************************************************************************************************-->
+        <div class="famDet">
+            <input type="hidden" name="attr_redFamDet" value="0" class="reducSection">
+            <input type="hidden" name="attr_lockFamDet" value="0" class="lockSection">
+            <div class="sectTitle">
+                <button class="lockButton" type="action" name="act_lockSect" value="lockFamDet" data-i18n-title="btnLockInfoTooltips">)</button>
+                <button class="unlockButton" type="action" name="act_lockSect" value="lockFamDet" data-i18n-title="btnUnlockInfoTooltips">(</button>
+                <span class="sectTitle" data-i18n="sectionTitleFamilyDetail"></span>
+                <button class="reducButton" type="action" name="act_expSect" value="redFamDet" data-i18n-title="btnReducInfoTooltips">_</button>
+                <button class="expandButton" type="action" name="act_expSect" value="redFamDet" data-i18n-title="btnExpandInfoTooltips">&</button>
+            </div>
+            <div class="sectContent">
+                <fieldset class="repeating_family">
+                    <div class="famDetRow">
+                        <div class="famDetRowCol">
+                            <span class="famDetLabel" data-i18n="famDetRelation"></span>
+                            <select class="famDetInput" name="attr_famDetRelation">
+                                <option data-i18n="selDefaultFamRel" value="selDefaultFamRel"></option>
+                                <option data-i18n="relFamMother" value="relFamMother"></option>
+                                <option data-i18n="relFamFather" value="relFamFather"></option>
+                                <option data-i18n="relFamBrother" value="relFamBrother"></option>
+                                <option data-i18n="relFamSister" value="relFamSister"></option>
+                                <option data-i18n="relFamWife" value="relFamWife"></option>
+                                <option data-i18n="relFamHusband" value="relFamHusband"></option>
+                                <option data-i18n="relFamUncle" value="relFamUncle"></option>
+                                <option data-i18n="relFamAunt" value="relFamAunt"></option>
+                                <option data-i18n="relFamGrandPa" value="relFamGrandPa"></option>
+                                <option data-i18n="relFamGrandMa" value="relFamGrandMa"></option>
+                                <option data-i18n="relFamSon" value="relFamSon"></option>
+                                <option data-i18n="relFamDaughter" value="relFamDaughter"></option>
+                                <option data-i18n="relFamCousin" value="relFamCousin"></option>
+                                <option data-i18n="relFamNephew" value="relFamNephew"></option>
+                                <option data-i18n="relFamNiece" value="relFamNiece"></option>
+                            </select>
+                            <span class="famDetValueLock" name="attr_famDetRelation" data-i18n-dynamic></span>
+                        </div>
+                        <div class="famDetRowCol">
+                            <span class="famDetLabel" data-i18n="famDetName"></span>
+                            <input class="famDetInput" type="text" name="attr_famDetName"/>
+                            <span class="famDetValueLock" name="attr_famDetName"></span>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="sectReduced">
+
+            </div>
+        </div>
+<!--***********************************************************************************************************************************************
+Passives and Gift Details
+************************************************************************************************************************************************-->
+        <div class="passGifts">
+<!--***********************************************************************************************************************************************
+Passives
+************************************************************************************************************************************************-->
+            <input type="hidden" name="attr_redPasDet" value="0" class="reducSectionPasDet">
+            <div class="pasDet">
+                <input type="hidden" name="attr_redPasDet" value="0" class="reducSection">
+                <input type="hidden" name="attr_lockPasDet" value="0" class="lockSection">
+                <div class="sectTitle">
+                    <button class="lockButton" type="action" name="act_lockSect" value="lockPasDet" data-i18n-title="btnLockInfoTooltips">)</button>
+                    <button class="unlockButton" type="action" name="act_lockSect" value="lockPasDet" data-i18n-title="btnUnlockInfoTooltips">(</button>
+                    <span class="sectTitle" data-i18n="sectionPassives"></span>
+                    <button class="reducButton" type="action" name="act_expSect" value="redPasDet" data-i18n-title="btnReducInfoTooltips">_</button>
+                    <button class="expandButton" type="action" name="act_expSect" value="redPasDet" data-i18n-title="btnExpandInfoTooltips">&</button>
+                </div>
+                <div class="sectContent">
+                    <textarea class="pasDet" name="attr_passivesDetails"></textarea>
+                    <textarea class="pasDetValueLock" name="attr_passivesDetails" readonly></textarea>
+                </div>
+                <div class="sectReduced">
+
+                </div>
+            </div>
+<!--***********************************************************************************************************************************************
+Gifts
+************************************************************************************************************************************************-->
+            <input type="hidden" name="attr_redGifDet" value="0" class="reducSectionGifDet">
+            <div class="gifDet">
+                <input type="hidden" name="attr_redGifDet" value="0" class="reducSection">
+                <input type="hidden" name="attr_lockGifDet" value="0" class="lockSection">
+                <div class="sectTitle">
+                    <button class="lockButton" type="action" name="act_lockSect" value="lockGifDet" data-i18n-title="btnLockInfoTooltips">)</button>
+                    <button class="unlockButton" type="action" name="act_lockSect" value="lockGifDet" data-i18n-title="btnUnlockInfoTooltips">(</button>
+                    <span class="sectTitle" data-i18n="sectionGifts"></span>
+                    <button class="reducButton" type="action" name="act_expSect" value="redGifDet" data-i18n-title="btnReducInfoTooltips">_</button>
+                    <button class="expandButton" type="action" name="act_expSect" value="redGifDet" data-i18n-title="btnExpandInfoTooltips">&</button>
+                </div>
+                <div class="sectContent">
+                    <textarea class="gifDet" name="attr_giftsDetails"></textarea>
+                    <textarea class="gifDetValueLock" name="attr_giftsDetails" readonly></textarea>
+                </div>
+                <div class="sectReduced">
+
+                </div>
+            </div>
+        </div>
+<!--***********************************************************************************************************************************************
+Background Details
+************************************************************************************************************************************************-->
+        <div class="backDet">
+            <input type="hidden" name="attr_redBackDet" value="0" class="reducSection">
+            <input type="hidden" name="attr_lockBackDet" value="0" class="lockSection">
+            <div class="sectTitle">
+                <button class="lockButton" type="action" name="act_lockSect" value="lockBackDet" data-i18n-title="btnLockInfoTooltips">)</button>
+                <button class="unlockButton" type="action" name="act_lockSect" value="lockBackDet" data-i18n-title="btnUnlockInfoTooltips">(</button>
+                <span class="sectTitle" data-i18n="sectionBack"></span>
+                <button class="reducButton" type="action" name="act_expSect" value="redBackDet" data-i18n-title="btnReducInfoTooltips">_</button>
+                <button class="expandButton" type="action" name="act_expSect" value="redBackDet" data-i18n-title="btnExpandInfoTooltips">&</button>
+            </div>
+            <div class="sectContent">
+                <textarea class="backDet" name="attr_backDetails"></textarea>
+                <textarea class="backDetValueLock" name="attr_backDetails" readonly></textarea>
+            </div>
+            <div class="sectReduced">
+
+            </div>
+        </div>
+    </div>
+<!--***********************************************************************************************************************************************
+Status
+************************************************************************************************************************************************-->
+    <div class="status">
+<!--***********************************************************************************************************************************************
+Wounds and Overcharge
+************************************************************************************************************************************************-->
+        <div class="wndsOver">
+<!--***********************************************************************************************************************************************
+Wounds
+************************************************************************************************************************************************-->
+            <div class="wnds">
+                <input type="hidden" name="attr_redWnds" value="0" class="reducSection">
+                <input type="hidden" name="attr_lockWnds" value="0" class="lockSection">
+                <div class="sectTitle">
+                    <button class="lockButton" type="action" name="act_lockSect" value="lockWnds" data-i18n-title="btnLockInfoTooltips">)</button>
+                    <button class="unlockButton" type="action" name="act_lockSect" value="lockWnds" data-i18n-title="btnUnlockInfoTooltips">(</button>
+                    <span class="sectTitle" data-i18n="sectionWounds"></span>
+                    <button class="reducButton" type="action" name="act_expSect" value="redWnds" data-i18n-title="btnReducInfoTooltips">_</button>
+                    <button class="expandButton" type="action" name="act_expSect" value="redWnds" data-i18n-title="btnExpandInfoTooltips">&</button>
+                </div>
+                <div class="sectContent">
+                    <div class="wndsRow">
+                        <div class="wndsRowCol">
+                            <span class="wndsLabel" data-i18n="wndsLabel"></span>
+                            <input type="number" class="wndsValue" name="attr_wndsAmount" value="0" min="0">
+                            <span class="wndsValueLock" name="attr_wndsAmount"></span>
+                        </div>
+                        <div class="wndsRowCol">
+                            <span class="wndsLabel" data-i18n="wndsModifier"></span>
+                            <span class="wndsValue" name="attr_wndsModifier"></span>
+                        </div>
+                    </div>
+                    <div class="wndsRow">
+                        <input type="hidden" class="toggleHPRange" name="attr_wndsPerc" value="0">
+                        <span class="wndsHpRange" name="attr_wndsStat">
+                    </div>
+                </div>
+                <div class="sectReduced">
+                    <!--
+                    <div class="wndsRowCol">
+                        <span class="wndsLabelReduc" data-i18n="wndsLabel"></span>
+                        <input type="number" class="wndsValue" name="attr_wndsAmount" value="0" min="0">
+                        <span class="wndsValueLock" name="attr_wndsAmount"></span>
+                    </div>
+                    <div class="wndsRowCol">
+                        <span class="wndsLabelReduc" data-i18n="wndsModifier"></span>
+                        <span class="wndsValue" name="attr_wndsModifier"></span>
+                    </div>
+                    -->
+                </div>
+            </div>
+<!--***********************************************************************************************************************************************
+Overcharge
+************************************************************************************************************************************************-->
+            <div class="over">
+                <input type="hidden" name="attr_redOver" value="0" class="reducSection">
+                <input type="hidden" name="attr_lockOver" value="0" class="lockSection">
+                <div class="sectTitle">
+                    <button class="lockButton" type="action" name="act_lockSect" value="lockOver" data-i18n-title="btnLockInfoTooltips">)</button>
+                    <button class="unlockButton" type="action" name="act_lockSect" value="lockOver" data-i18n-title="btnUnlockInfoTooltips">(</button>
+                    <span class="sectTitle" data-i18n="sectionOvercharge"></span>
+                    <button class="reducButton" type="action" name="act_expSect" value="redOver" data-i18n-title="btnReducInfoTooltips">_</button>
+                    <button class="expandButton" type="action" name="act_expSect" value="redOver" data-i18n-title="btnExpandInfoTooltips">&</button>
+                </div>
+                <div class="sectContent">
+                    <div class="overRow">
+                        <span class="overLabel" data-i18n="overCurrent"></span>
+                        <input type="number" class="overValue" name="attr_overAmount" value="0" min="0">
+                        <span class="overValueLock" name="attr_overAmount"></span>
+                    </div>
+                    <div class="overRow">
+                        <span class="overLabel" data-i18n="overMaximum"></span>
+                        <input class="overValue" type="number" name="attr_overMaximum" value="(@{traitsConcentration}*5)+@{infosRank}" disabled/>
+                        <!--<span class="overValue" name="attr_overMaximum"></span>-->
+                    </div>
+                </div>
+                <div class="sectReduced">
+                    
+                </div>
+            </div>
+        </div>
+<!--***********************************************************************************************************************************************
+Injury levels
+************************************************************************************************************************************************-->
+        <div class="injuryLevel">
+            <input type="hidden" name="attr_redInjLvl" value="0" class="reducSection">
+            <input type="hidden" name="attr_lockInjLvl" value="0" class="lockSection">
+            <div class="sectTitle">
+                <button class="lockButton" type="action" name="act_lockSect" value="lockInjLvl" data-i18n-title="btnLockInfoTooltips">)</button>
+                <button class="unlockButton" type="action" name="act_lockSect" value="lockInjLvl" data-i18n-title="btnUnlockInfoTooltips">(</button>
+                <span class="sectTitle" data-i18n="sectionInjLvl"></span>
+                <button class="reducButton" type="action" name="act_expSect" value="redInjLvl" data-i18n-title="btnReducInfoTooltips">_</button>
+                <button class="expandButton" type="action" name="act_expSect" value="redInjLvl" data-i18n-title="btnExpandInfoTooltips">&</button>
+            </div>
+            <div class="sectContent">
+                <div class="injuryLevelTabHeader">
+                    <div class="injuryLevelCol">
+                        <span class="injuryLevelHeader" data-i18n="hpLevelUnscathed"></span>
+                    </div>
+                    <div class="injuryLevelCol" id="middle">
+                        <span class="injuryLevelHeader" data-i18n="hpLevelScraped"></span>
+                    </div>
+                    <div class="injuryLevelCol">
+                        <span class="injuryLevelHeader" data-i18n="hpLevelSlightlyInjured"></span>
+                    </div>
+                    <div class="injuryLevelCol" id="middle">
+                        <span class="injuryLevelHeader" data-i18n="hpLevelInjured"></span>
+                    </div>
+                    <div class="injuryLevelCol">
+                        <span class="injuryLevelHeader" data-i18n="hpLevelSeriouslyInjured"></span>
+                    </div>
+                    <div class="injuryLevelCol" id="middle">
+                        <span class="injuryLevelHeader" data-i18n="hpLevelImpotent"></span>
+                    </div>
+                    <div class="injuryLevelCol">
+                        <span class="injuryLevelHeader" data-i18n="hpLevelExhausted"></span>
+                    </div>
+                    <div class="injuryLevelCol" id="end">
+                        <span class="injuryLevelHeader" data-i18n="hpLevelDead"></span>
+                    </div>
+                </div>
+                <div class="injuryLevelTabValue">
+                    <div class="injuryLevelCol">
+                        <input type="hidden" name="attr_hpLevelUnscathed" value="0">
+                        <span class="injuryLevelValue" name="attr_hpLevelUnscathed" ></span>
+                    </div>
+                    <div class="injuryLevelCol" id="middle">
+                        <input class="injuryLevelValue" type="number" name="attr_hpLevelScraped" value="@{traitsTenacity}*5" disabled/>
+                    </div>
+                    <div class="injuryLevelCol">
+                        <input class="injuryLevelValue" type="number" name="attr_hpLevelSlightlyInjured" value="(@{traitsFerocity}*2)+@{hpLevelScraped}" disabled/>
+                    </div>
+                    <div class="injuryLevelCol" id="middle">
+                        <input class="injuryLevelValue" type="number" name="attr_hpLevelInjured" value="(@{traitsFerocity}*2)+@{hpLevelSlightlyInjured}" disabled/>
+                    </div>
+                    <div class="injuryLevelCol">
+                        <input class="injuryLevelValue" type="number" name="attr_hpLevelSeriouslyInjured" value="(@{traitsFerocity}*2)+@{hpLevelInjured}" disabled/>
+                    </div>
+                    <div class="injuryLevelCol" id="middle">
+                        <input class="injuryLevelValue" type="number" name="attr_hpLevelImpotent" value="(@{traitsFerocity}*2)+@{hpLevelSeriouslyInjured}" disabled/>
+                    </div>
+                    <div class="injuryLevelCol">
+                        <input class="injuryLevelValue" type="number" name="attr_hpLevelExhausted" value="(@{traitsFerocity}*2)+@{hpLevelImpotent}" disabled/>
+                    </div>
+                    <div class="injuryLevelCol" id="end">
+                        <input class="injuryLevelValue" type="number" name="attr_hpLevelDead" value="(@{traitsFerocity}*2)+@{hpLevelExhausted}" disabled/>
+                    </div>
+                </div>
+            </div>
+            <div class="sectReduced">
+                    
             </div>
         </div>
     </div>

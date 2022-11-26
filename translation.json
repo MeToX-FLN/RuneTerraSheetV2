@@ -16,6 +16,14 @@
 
     "sectionTitleHead" : "General informations",
     "sectionTitleTraits" : "Traits",
+    "sectionTitlePhysicalDetail" : "Physical Details",
+    "sectionTitleFamilyDetail" : "Family Detail",
+    "sectionPassives" : "Passives",
+    "sectionGifts" : "Gifts",
+    "sectionBack" : "Background",
+    "sectionWounds" : "Wounds",
+    "sectionOvercharge" : "Overcharge",
+    "sectionInjLvl" : "Injury Levels",
 
     "infosLabelName" : "Name:",
     "infosLabelOrigin": "Origin:",
@@ -31,9 +39,11 @@
 
     "selDefaultOrigin" : "Choose an origin..",
     "selDefaultRace" : "Choose a Race..",
-    "selDefaultRaceSpe" : "Choose your Race Specialization",
+    "selDefaultRaceSpe" : "Choose your Race Specialization..",
     "selDefaultDestiny" : "Choose a Destiny..",
-    "selDefaultClassSocial": "Choose a Social Class",
+    "selDefaultClassSocial": "Choose a Social Class..",
+    "selDefaultGender" : "Choose a gender..",
+    "selDefaultFamRel" : "Choose a Family Relationship..",
 
     "plHolRace" : "Name your custom Race",
     "plHolDest" : "Name your custom Destiny",
@@ -116,10 +126,49 @@
     "traitsWits" : "Wits",
     "traitsConcentration" : "Concentration",
 
+    "phyDetGender" : "Gender:",
+    "phyDetAge": "Age:",
+    "phyDetHeight": "Height:",
+    "phyDetWeight": "Weight:",
+    "phyDetHair": "Hair:",
+    "phyDetEyes": "Eyes:",
 
+    "genderMale" : "Male",
+    "genderFemale" : "Female",
 
+    "famDetRelation" : "Relation:",
+    "famDetName" : "Name:",
 
+    "relFamMother" : "Mother",
+    "relFamFather" : "Father",
+    "relFamBrother" : "Brother",
+    "relFamSister" : "Sister",
+    "relFamWife" : "Wife",
+    "relFamHusband" : "Husband",
+    "relFamUncle" : "Uncle",
+    "relFamAunt" : "Aunt",
+    "relFamGrandPa" : "Grand Father",
+    "relFamGrandMa" : "Grand Mother",
+    "relFamSon" : "Son",
+    "relFamDaughter" : "Daughter",
+    "relFamCousin" : "Cousin",
+    "relFamNephew" : "Nephew",
+    "relFamNiece" : "Niece",
 
+    "wndsLabel" : "Wounds:",
+    "wndsModifier" : "Modifier:",
+
+    "overCurrent" : "Current:",
+    "overMaximum" : "Maximum:",
+
+    "hpLevelUnscathed":"Unscathed",
+    "hpLevelScraped":"Scraped",
+    "hpLevelSlightlyInjured":"Slightly Inj.",
+    "hpLevelInjured":"Injured",
+    "hpLevelSeriouslyInjured":"Seriously Inj.",
+    "hpLevelImpotent":"Impotent",
+    "hpLevelExhausted":"Exhausted",
+    "hpLevelDead":"Dead",
 
 
 
